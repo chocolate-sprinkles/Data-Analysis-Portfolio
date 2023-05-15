@@ -6,7 +6,82 @@ class BasketBallReferenceConnection:
 
     # Solve getting the correct URL first
     def __init__(self,league,season_type,data_type,year):
-        pass
+        
+        if not isinstance(league,str):
+            raise TypeError("league must be a string")
+        elif league not in ["NBA","WNBA"]:
+            raise ValueError("league must be either 'NBA' or 'WNBA'")
+        else:
+            self.league = league
+
+        if not isinstance(season_type,str):
+            raise TypeError("season_type must be a string")
+        elif season_type not in ["regular","playoff"]:
+            raise ValueError ("season_type must be either 'regular' or 'playoff")
+        else:
+            self.season_type = season_type
+
+        if not isinstance(data_type,str):
+            raise TypeError("data_type must be a string")
+        elif data_type not in ["team","player"]:
+            raise ValueError("data_type must be either 'team' or 'player'")
+        else:
+            self.data_type = data_type
+
+        if not isinstance(year,str):
+            raise TypeError("year must be a string")
+        elif "-" not in year:
+            raise ValueError("year must be in YYYY-YY format")
+        elif not year.replace("-","").isdigit():
+            raise ValueError("year must be in YYYY-YY format")
+        elif int(year.split("-")[0][-2:]) - int(year.split("-")[1]) != -1:
+            raise ValueError("year must be in YYYY-YY format")
+        elif int(year.split("-")[0]) < 1946 or int(year.split("-")[0]) > 2023:
+            raise ValueError("year not within allowable values")
+        else:
+            self.year = year
+
+        # Generate URL
+        # can probably use a dictionary
+        base = "https://www.basketball-reference.com/"
+
+        self.url = base + "leagues/NBA_20" + year.split("-")[1]
+
+        response = requests.get(self.url)
+        self.soup = BeautifulSoup(response.content, "html.parser")
+
+        #https://www.basketball-reference.com/leagues/NBA_2023.html
+        def get_per_game_stats(self,stats_type):
+            # stats_type -> one of team, opponent
+            pass
+
+        def get_total_stats(self,stats_type):
+            pass
+
+        def get_per_100_poss_stats(self,stats_type):
+            pass
+
+        def get_advanced_stats():
+            pass
+
+        def get_shooting_stats(self,stats_type):
+            pass
+
+        def get_league_awards(self):
+            pass
+
+        def get_players_of_the_week(self):
+            pass
+
+        def get_players_of_the_month(self):
+            pass
+        
+        # https://www.basketball-reference.com/playoffs/NBA_2023.html
+        
+
+#x = BasketBallReferenceConnection()
+
+        
         # league -> one of NBA, WNBA
         # season_type -> one of regular, playoffs
         # data_type -> one of team, player
@@ -50,3 +125,6 @@ class BasketBallReferenceConnection:
 # remote: warning: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
 # To https://github.com/chocolate-sprinkles/Data-Analysis-Portfolio.git
 #    6413077..a8b4ac6  main -> main
+
+        # so, for any methods, you can check the URL you're working with. you'll know that for a URL of a certain type, you can 
+        # do some stuff and for other ones, you cannot
