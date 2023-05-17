@@ -4,9 +4,9 @@ from bs4 import BeautifulSoup
 
 class BasketBallReferenceConnection:
 
-    # Solve getting the correct URL first
     def __init__(self,league,season_type,data_type,year):
         
+        # WNBA will be updated later
         if not isinstance(league,str):
             raise TypeError("league must be a string")
         elif league not in ["NBA","WNBA"]:
@@ -16,8 +16,8 @@ class BasketBallReferenceConnection:
 
         if not isinstance(season_type,str):
             raise TypeError("season_type must be a string")
-        elif season_type not in ["regular","playoff"]:
-            raise ValueError ("season_type must be either 'regular' or 'playoff")
+        elif season_type not in ["regular","playoffs"]:
+            raise ValueError ("season_type must be either 'regular' or 'playoffs")
         else:
             self.season_type = season_type
 
@@ -40,32 +40,97 @@ class BasketBallReferenceConnection:
             raise ValueError("year not within allowable values")
         else:
             self.year = year
-
+        
         # Generate URL
-        # can probably use a dictionary
         base = "https://www.basketball-reference.com/"
+        end = ".html"
+        url_mapping = {"NBA":"NBA_","WNBA":"wnba","regular":"leagues/","playoffs":"playoffs/","team":"","player":"_per_game"}
 
-        self.url = base + "leagues/NBA_20" + year.split("-")[1]
+        self.url = base + url_mapping[self.season_type] + url_mapping[self.league] + self.year[:2] + self.year[-2:] + url_mapping[self.data_type] + end
 
+        # Generate soup object
         response = requests.get(self.url)
         self.soup = BeautifulSoup(response.content, "html.parser")
 
+        if [self.league,self.season_type,self.data_type] == ["NBA","regular","team"]:
+            self.url_type = 1
+        elif [self.league,self.season_type,self.data_type] == ["NBA","playoff","team"]:
+            self.url_type = 2
+        elif [self.league,self.season_type,self.data_type] == ["NBA","regular","player"]:
+            self.url_type = 3
+        elif [self.league,self.season_type,self.data_type] == ["NBA","playoff","player"]:
+            self.url_type = 4
+
         #https://www.basketball-reference.com/leagues/NBA_2023.html
-        def get_per_game_stats(self,stats_type):
-            # stats_type -> one of team, opponent
-            pass
+        # so get playoff stats has similar stats 
+        # from a user experience, if you say get_stats(), you'll want to get them regardless of which url you have 
+        # rename this to get team stats and have another called player stats. have this one handle playoff and regular season urls.
+        def get_stats(self,stats_type,opponent):
+            # stats_type one of "pg","total","per 100","adv","shooting"
+            # css_ids
+            # per_game-team
+            # per_game-opponent
+            # totals-team
+            # totals-opponent
+            # per_poss-team
+            # per_poss-opponent
+            # advanced-team
+            # shooting-team
+            # shooting-opponent
 
-        def get_total_stats(self,stats_type):
-            pass
+            if self.url_type == 1:
 
-        def get_per_100_poss_stats(self,stats_type):
-            pass
+                css_id_mapping = {"pg":"per_game-","total":"totals-","per 100":"per_poss-","adv":"advanced-","shooting":"shooting-",False:"team",True:"opponent"}
+                css_id = css_id_mapping[stats_type] + css_id_mapping[opponent]
+                stats_df = pd.read_html(str(self.soup.find('table', {"id": css_id})))[0]
 
-        def get_advanced_stats():
-            pass
+                advanced_cols = ['Rk','Team','Age','W','L','PW','PL','MOV','SOS','SRS','ORtg','DRtg','NRtg','Pace','FTr','3PAr','TS%','Unnamed: 17_level_1','eFG%_off','TOV%_off','ORB%_off','FT/FGA_off','Unnamed: 22_level_1','eFG%_def','TOV%_def','DRB%_def','FT/FGA_def','Unnamed: 27_level_1','Arena','Attend.','Attend./G']
 
-        def get_shooting_stats(self,stats_type):
-            pass
+                shooting_cols_team = ['Rk','Team','G','MP','FG%','Dist.','Unnamed: 6_level_1','pct_FGA_2P','pct_FGA_0-3','pct_FGA_3-10','pct_FGA_10-16','pct_FGA_16-3P','pct_FGA_3P','Unnamed: 13_level_1','fga_pct_2P','fga_pct_0-3','fga_pct_3-10','fga_pct_10-16','fga_pct_16-3P','fga_pct_3P','Unnamed: 20_level_1','pct_ast_2P', 'pct_ast_3P','Unnamed: 23_level_1','dunk_FGA%','dunk_Md.','Unnamed: 26_level_1','layup_FGA%','layup_Md.','Unnamed: 29_level_1','corner_%3PA','corner_3P%',"heaves_att","heaves_md"]
+
+                shooting_cols_opponent = shooting_cols_team[:-2]
+
+                # if "advanced" in css_id:
+                #     stats_df.columns = advanced_cols
+                #     stats_df = stats_df.drop(['Unnamed: 17_level_1','Unnamed: 22_level_1','Unnamed: 27_level_1'],axis=1).copy(deep=True)
+                #     stats_df["Team"] = stats_df["Team"].apply(lambda team_name: team_name.replace("*",""))
+                #     stats_df = stats_df.iloc[:-1]
+                #     return stats_df
+                # elif css_id == "shooting-team":
+                #     stats_df.columns = shooting_cols_team
+                #     stats_df = stats_df.drop(['Unnamed: 6_level_1','Unnamed: 13_level_1','Unnamed: 20_level_1','Unnamed: 20_level_1','Unnamed: 23_level_1','Unnamed: 26_level_1','Unnamed: 29_level_1','Unnamed: 32_level_1'],axis=1).copy(deep=True)
+                #     stats_df["Team"] = stats_df["Team"].apply(lambda team_name: team_name.replace("*",""))
+                #     stats_df = stats_df.iloc[:-1]
+                #     return stats_df
+                # elif css_id == "shooting-opponent":
+                #     stats_df.columns = shooting_cols_opponent
+                #     stats_df = stats_df.drop(['Unnamed: 6_level_1','Unnamed: 13_level_1','Unnamed: 20_level_1','Unnamed: 20_level_1','Unnamed: 23_level_1','Unnamed: 26_level_1','Unnamed: 29_level_1'],axis=1).copy(deep=True)
+                #     stats_df["Team"] = stats_df["Team"].apply(lambda team_name: team_name.replace("*",""))
+                #     stats_df = stats_df.iloc[:-1]
+                #     return stats_df
+                # else:
+                #     stats_df["Team"] = stats_df["Team"].apply(lambda team_name: team_name.replace("*",""))
+                #     stats_df = stats_df.iloc[:-1]
+                #     return stats_df
+
+                # can reduce this further with a dictionary for column renaming and then probably a function to pass all unnamed column names to the drop method
+                if "advanced" in css_id:
+                    stats_df.columns = advanced_cols
+                    stats_df = stats_df.drop(['Unnamed: 17_level_1','Unnamed: 22_level_1','Unnamed: 27_level_1'],axis=1).copy(deep=True)
+                elif css_id == "shooting-team":
+                    stats_df.columns = shooting_cols_team
+                    stats_df = stats_df.drop(['Unnamed: 6_level_1','Unnamed: 13_level_1','Unnamed: 20_level_1','Unnamed: 20_level_1','Unnamed: 23_level_1','Unnamed: 26_level_1','Unnamed: 29_level_1','Unnamed: 32_level_1'],axis=1).copy(deep=True)
+                elif css_id == "shooting-opponent":
+                    stats_df.columns = shooting_cols_opponent
+                    stats_df = stats_df.drop(['Unnamed: 6_level_1','Unnamed: 13_level_1','Unnamed: 20_level_1','Unnamed: 20_level_1','Unnamed: 23_level_1','Unnamed: 26_level_1','Unnamed: 29_level_1'],axis=1).copy(deep=True)
+
+                stats_df["Team"] = stats_df["Team"].apply(lambda team_name: team_name.replace("*",""))
+                stats_df = stats_df.iloc[:-1]
+                return stats_df
+            
+            else:
+                # so, is this good user experience to do this? how do they know which method to use? get_stats is kinda all encompassing
+                raise Exception("Cannot use this method for this object")
 
         def get_league_awards(self):
             pass
@@ -77,10 +142,121 @@ class BasketBallReferenceConnection:
             pass
         
         # https://www.basketball-reference.com/playoffs/NBA_2023.html
+        def get_playoff_per_game_stats():
+            pass
+
+        def get_playoff_total_stats():
+            pass
+
+        def get_playoff_per_100_poss_stats():
+            pass
+
+        def get_playoff_advanced_stats():
+            pass
+
+        def get_playoff_shooting_stats():
+            pass
+
+        # https://www.basketball-reference.com/leagues/NBA_2023_per_game.html
+        #how do I want to combine these? I can use probably one URL to get all this info
+
+        def get_player_per_game_stats():
+            pass
+
+        def get_points_pg_leaders():
+            pass
+
+        def get_rebounds_pg_leaders():
+            pass
         
+        def get_assists_pg_leaders():
+            pass
 
-#x = BasketBallReferenceConnection()
+        def get_steals_pg_game_leaders():
+            pass
 
+        def get_blocks_pg_game_leaders():
+            pass
+
+        def get_field_goal_pct_leaders():
+            pass
+
+        def get_free_throw_pct_leaders():
+            pass
+
+        def get_3pt_field_goal_pct_leaders():
+            pass
+
+        def get_2pt_field_goal_pct_leaders():
+            pass
+
+        def get_eff_field_goal_pct_leaders():
+            pass
+        
+        def get_minutes_pg_leaders():
+            pass
+
+# League Leaders Categories
+# points
+# points per game -> inculuded
+# total rebounds
+# rebounds per game -> included 
+# offensive rebounds
+# defensive rebounds
+# assists
+# assists per game -> included
+# steals
+# steals per game -> included
+# blocks
+# blocks per game -> included
+# field goal percentage -> included
+# free throw percentage -> included
+# 3-pt field goal percentage -> included
+# 2-pt field goal percentage -> included
+# effective field goal percentage (pct) -> included
+# true shooting pct 
+# field goals  
+# field goal attempts 
+# 2-pt field goals 
+# 2-pt field goal attempts 
+# 3-pt field goals 
+# 3-pt field goal attempts 
+# field goals missed 
+# free throws 
+# free throw attempts 
+# minutes played 
+# minutes per game 
+# turnovers 
+# personal fouls
+# player efficiency rating 
+# win shares 
+# offensive win shares
+# defensive winshares 
+# win shares per 48 mins 
+# box plus/minus
+# offensive box plus/minus
+# value over replacement player 
+# offensive rating 
+# defensive rating 
+# usage pct 
+# total rebound pct 
+# offensive rebound pct 
+# assist pct 
+# defensive rebound pct 
+# steal pct 
+# block pct 
+# turnover pct 
+
+# x = BasketBallReferenceConnection("NBA","regular","team","2022-23")
+# print(x.url)
+# x = BasketBallReferenceConnection("NBA","regular","player","2022-23")
+# print(x.url)
+# x = BasketBallReferenceConnection("NBA","playoffs","team","2022-23")
+# print(x.url)
+# x = BasketBallReferenceConnection("NBA","playoffs","player","2022-23")
+# print(x.url)
+# x = BasketBallReferenceConnection("NBA","regular","team","1995-96")
+# print(x.url)
         
         # league -> one of NBA, WNBA
         # season_type -> one of regular, playoffs
@@ -128,3 +304,5 @@ class BasketBallReferenceConnection:
 
         # so, for any methods, you can check the URL you're working with. you'll know that for a URL of a certain type, you can 
         # do some stuff and for other ones, you cannot
+
+        # See if you can publish the package on PyPi. Would be a good add

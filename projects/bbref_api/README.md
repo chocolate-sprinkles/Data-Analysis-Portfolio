@@ -1,4 +1,4 @@
-# Basketball Reference API
+# Basketball Reference Package
 
 ## Introduction
 
