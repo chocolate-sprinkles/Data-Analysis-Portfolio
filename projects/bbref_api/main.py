@@ -1,6 +1,7 @@
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup
+from bs4 import Comment 
 
 class BasketBallReferenceConnection:
 
@@ -54,147 +55,212 @@ class BasketBallReferenceConnection:
 
         if [self.league,self.season_type,self.data_type] == ["NBA","regular","team"]:
             self.url_type = 1
-        elif [self.league,self.season_type,self.data_type] == ["NBA","playoff","team"]:
+        elif [self.league,self.season_type,self.data_type] == ["NBA","playoffs","team"]:
             self.url_type = 2
         elif [self.league,self.season_type,self.data_type] == ["NBA","regular","player"]:
             self.url_type = 3
-        elif [self.league,self.season_type,self.data_type] == ["NBA","playoff","player"]:
+        elif [self.league,self.season_type,self.data_type] == ["NBA","playoffs","player"]:
             self.url_type = 4
 
         #https://www.basketball-reference.com/leagues/NBA_2023.html
         # so get playoff stats has similar stats 
         # from a user experience, if you say get_stats(), you'll want to get them regardless of which url you have 
         # rename this to get team stats and have another called player stats. have this one handle playoff and regular season urls.
-        def get_stats(self,stats_type,opponent):
-            # stats_type one of "pg","total","per 100","adv","shooting"
-            # css_ids
-            # per_game-team
-            # per_game-opponent
-            # totals-team
-            # totals-opponent
-            # per_poss-team
-            # per_poss-opponent
-            # advanced-team
-            # shooting-team
-            # shooting-opponent
+    def get_stats(self,stats_type,opponent):
+        # stats_type one of "pg","total","per 100","adv","shooting"
+        # css_ids
+        # per_game-team
+        # per_game-opponent
+        # totals-team
+        # totals-opponent
+        # per_poss-team
+        # per_poss-opponent
+        # advanced-team
+        # shooting-team
+        # shooting-opponent
 
-            if self.url_type == 1:
+        if self.url_type == 1:
 
-                css_id_mapping = {"pg":"per_game-","total":"totals-","per 100":"per_poss-","adv":"advanced-","shooting":"shooting-",False:"team",True:"opponent"}
-                css_id = css_id_mapping[stats_type] + css_id_mapping[opponent]
-                stats_df = pd.read_html(str(self.soup.find('table', {"id": css_id})))[0]
+            css_id_mapping = {"pg":"per_game-","total":"totals-","per 100":"per_poss-","adv":"advanced-","shooting":"shooting-",False:"team",True:"opponent"}
+            css_id = css_id_mapping[stats_type] + css_id_mapping[opponent]
+            if stats_type == "adv":
+                css_id = "advanced-team"
+            stats_df = pd.read_html(str(self.soup.find('table', {"id": css_id})))[0]
 
-                advanced_cols = ['Rk','Team','Age','W','L','PW','PL','MOV','SOS','SRS','ORtg','DRtg','NRtg','Pace','FTr','3PAr','TS%','Unnamed: 17_level_1','eFG%_off','TOV%_off','ORB%_off','FT/FGA_off','Unnamed: 22_level_1','eFG%_def','TOV%_def','DRB%_def','FT/FGA_def','Unnamed: 27_level_1','Arena','Attend.','Attend./G']
+            advanced_cols = ['Rk','Team','Age','W','L','PW','PL','MOV','SOS','SRS','ORtg','DRtg','NRtg','Pace','FTr','3PAr','TS%','Unnamed: 17_level_1','eFG%_off','TOV%_off','ORB%_off','FT/FGA_off','Unnamed: 22_level_1','eFG%_def','TOV%_def','DRB%_def','FT/FGA_def','Unnamed: 27_level_1','Arena','Attend.','Attend./G']
 
-                shooting_cols_team = ['Rk','Team','G','MP','FG%','Dist.','Unnamed: 6_level_1','pct_FGA_2P','pct_FGA_0-3','pct_FGA_3-10','pct_FGA_10-16','pct_FGA_16-3P','pct_FGA_3P','Unnamed: 13_level_1','fga_pct_2P','fga_pct_0-3','fga_pct_3-10','fga_pct_10-16','fga_pct_16-3P','fga_pct_3P','Unnamed: 20_level_1','pct_ast_2P', 'pct_ast_3P','Unnamed: 23_level_1','dunk_FGA%','dunk_Md.','Unnamed: 26_level_1','layup_FGA%','layup_Md.','Unnamed: 29_level_1','corner_%3PA','corner_3P%',"heaves_att","heaves_md"]
+            shooting_cols_team = ['Rk','Team','G','MP','FG%','Dist.','Unnamed: 6_level_1','pct_FGA_2P','pct_FGA_0-3','pct_FGA_3-10','pct_FGA_10-16','pct_FGA_16-3P','pct_FGA_3P','Unnamed: 13_level_1','fga_pct_2P','fga_pct_0-3','fga_pct_3-10','fga_pct_10-16','fga_pct_16-3P','fga_pct_3P','Unnamed: 20_level_1','pct_ast_2P', 'pct_ast_3P','Unnamed: 23_level_1','dunk_FGA%','dunk_Md.','Unnamed: 26_level_1','layup_FGA%','layup_Md.','Unnamed: 29_level_1','corner_%3PA','corner_3P%',"Unnamed: 32_level_1","heaves_att","heaves_md"]
 
-                shooting_cols_opponent = shooting_cols_team[:-2]
+            shooting_cols_opponent = shooting_cols_team[:-3]
 
-                # if "advanced" in css_id:
-                #     stats_df.columns = advanced_cols
-                #     stats_df = stats_df.drop(['Unnamed: 17_level_1','Unnamed: 22_level_1','Unnamed: 27_level_1'],axis=1).copy(deep=True)
-                #     stats_df["Team"] = stats_df["Team"].apply(lambda team_name: team_name.replace("*",""))
-                #     stats_df = stats_df.iloc[:-1]
-                #     return stats_df
-                # elif css_id == "shooting-team":
-                #     stats_df.columns = shooting_cols_team
-                #     stats_df = stats_df.drop(['Unnamed: 6_level_1','Unnamed: 13_level_1','Unnamed: 20_level_1','Unnamed: 20_level_1','Unnamed: 23_level_1','Unnamed: 26_level_1','Unnamed: 29_level_1','Unnamed: 32_level_1'],axis=1).copy(deep=True)
-                #     stats_df["Team"] = stats_df["Team"].apply(lambda team_name: team_name.replace("*",""))
-                #     stats_df = stats_df.iloc[:-1]
-                #     return stats_df
-                # elif css_id == "shooting-opponent":
-                #     stats_df.columns = shooting_cols_opponent
-                #     stats_df = stats_df.drop(['Unnamed: 6_level_1','Unnamed: 13_level_1','Unnamed: 20_level_1','Unnamed: 20_level_1','Unnamed: 23_level_1','Unnamed: 26_level_1','Unnamed: 29_level_1'],axis=1).copy(deep=True)
-                #     stats_df["Team"] = stats_df["Team"].apply(lambda team_name: team_name.replace("*",""))
-                #     stats_df = stats_df.iloc[:-1]
-                #     return stats_df
-                # else:
-                #     stats_df["Team"] = stats_df["Team"].apply(lambda team_name: team_name.replace("*",""))
-                #     stats_df = stats_df.iloc[:-1]
-                #     return stats_df
+            # if "advanced" in css_id:
+            #     stats_df.columns = advanced_cols
+            #     stats_df = stats_df.drop(['Unnamed: 17_level_1','Unnamed: 22_level_1','Unnamed: 27_level_1'],axis=1).copy(deep=True)
+            #     stats_df["Team"] = stats_df["Team"].apply(lambda team_name: team_name.replace("*",""))
+            #     stats_df = stats_df.iloc[:-1]
+            #     return stats_df
+            # elif css_id == "shooting-team":
+            #     stats_df.columns = shooting_cols_team
+            #     stats_df = stats_df.drop(['Unnamed: 6_level_1','Unnamed: 13_level_1','Unnamed: 20_level_1','Unnamed: 20_level_1','Unnamed: 23_level_1','Unnamed: 26_level_1','Unnamed: 29_level_1','Unnamed: 32_level_1'],axis=1).copy(deep=True)
+            #     stats_df["Team"] = stats_df["Team"].apply(lambda team_name: team_name.replace("*",""))
+            #     stats_df = stats_df.iloc[:-1]
+            #     return stats_df
+            # elif css_id == "shooting-opponent":
+            #     stats_df.columns = shooting_cols_opponent
+            #     stats_df = stats_df.drop(['Unnamed: 6_level_1','Unnamed: 13_level_1','Unnamed: 20_level_1','Unnamed: 20_level_1','Unnamed: 23_level_1','Unnamed: 26_level_1','Unnamed: 29_level_1'],axis=1).copy(deep=True)
+            #     stats_df["Team"] = stats_df["Team"].apply(lambda team_name: team_name.replace("*",""))
+            #     stats_df = stats_df.iloc[:-1]
+            #     return stats_df
+            # else:
+            #     stats_df["Team"] = stats_df["Team"].apply(lambda team_name: team_name.replace("*",""))
+            #     stats_df = stats_df.iloc[:-1]
+            #     return stats_df
 
-                # can reduce this further with a dictionary for column renaming and then probably a function to pass all unnamed column names to the drop method
-                if "advanced" in css_id:
-                    stats_df.columns = advanced_cols
-                    stats_df = stats_df.drop(['Unnamed: 17_level_1','Unnamed: 22_level_1','Unnamed: 27_level_1'],axis=1).copy(deep=True)
-                elif css_id == "shooting-team":
-                    stats_df.columns = shooting_cols_team
-                    stats_df = stats_df.drop(['Unnamed: 6_level_1','Unnamed: 13_level_1','Unnamed: 20_level_1','Unnamed: 20_level_1','Unnamed: 23_level_1','Unnamed: 26_level_1','Unnamed: 29_level_1','Unnamed: 32_level_1'],axis=1).copy(deep=True)
-                elif css_id == "shooting-opponent":
-                    stats_df.columns = shooting_cols_opponent
-                    stats_df = stats_df.drop(['Unnamed: 6_level_1','Unnamed: 13_level_1','Unnamed: 20_level_1','Unnamed: 20_level_1','Unnamed: 23_level_1','Unnamed: 26_level_1','Unnamed: 29_level_1'],axis=1).copy(deep=True)
+            # can reduce this further with a dictionary for column renaming and then probably a function to pass all unnamed column names to the drop method
+            if "advanced" in css_id:
+                #stats_df = pd.read_html(str(self.soup.find('table', {"id": "advanced-team"})))[0]
+                stats_df.columns = advanced_cols
+                stats_df = stats_df.drop(['Unnamed: 17_level_1','Unnamed: 22_level_1','Unnamed: 27_level_1'],axis=1).copy(deep=True)
+            elif css_id == "shooting-team":
+                # print(stats_df.columns)
+                # print(shooting_cols_team)
+                # print(len(stats_df.columns))
+                # print(len(shooting_cols_team))
+                stats_df.columns = shooting_cols_team
+                stats_df = stats_df.drop(['Unnamed: 6_level_1','Unnamed: 13_level_1','Unnamed: 20_level_1','Unnamed: 23_level_1','Unnamed: 26_level_1','Unnamed: 29_level_1','Unnamed: 32_level_1'],axis=1).copy(deep=True)
+            elif css_id == "shooting-opponent":
+                stats_df.columns = shooting_cols_opponent
+                stats_df = stats_df.drop(['Unnamed: 6_level_1','Unnamed: 13_level_1','Unnamed: 20_level_1','Unnamed: 23_level_1','Unnamed: 26_level_1','Unnamed: 29_level_1'],axis=1).copy(deep=True)
 
-                stats_df["Team"] = stats_df["Team"].apply(lambda team_name: team_name.replace("*",""))
-                stats_df = stats_df.iloc[:-1]
-                return stats_df
+            stats_df["Team"] = stats_df["Team"].apply(lambda team_name: team_name.replace("*",""))
+            #stats_df = stats_df.iloc[:-1]
+            stats_df = stats_df[~stats_df.isnull().T.any()]
+            return stats_df
+        
+        elif self.url_type == 2:
             
+            css_id_mapping = {"pg":"per_game-","total":"totals-","per 100":"per_poss-","adv":"advanced-","shooting":"shooting-",False:"team",True:"opponent"}
+            css_id = css_id_mapping[stats_type] + css_id_mapping[opponent]
+            if stats_type == "adv":
+                css_id = "advanced-team"
+
+            comment_ids = ["per_poss-team","per_poss-opponent","shooting-team","shooting-opponent"]
+            tags = {}
+
+            for comment in self.soup(text=lambda text: isinstance(text, Comment)):
+                for comment_id in comment_ids:
+                    if comment_id in comment.string:
+                        tags[comment_id] = BeautifulSoup(comment,"html.parser")
+
+
+            if css_id in tags.keys():
+                stats_df = pd.read_html(str(tags[css_id].find('table', {"id": css_id})))[0]
             else:
-                # so, is this good user experience to do this? how do they know which method to use? get_stats is kinda all encompassing
-                raise Exception("Cannot use this method for this object")
+                stats_df = pd.read_html(str(self.soup.find('table', {"id": css_id})))[0]
+            
+            # print(stats_df)
+            # print("-"*80)
 
-        def get_league_awards(self):
+            advanced_cols = ['Rk','Team','Age','W','L','W/L%','PW','PL','ORtg','DRtg','NRtg','Pace','FTr','3PAr','TS%','Unnamed: 15_level_1','eFG%_off','TOV%_off','ORB%_off','FT/FGA_off','Unnamed: 20_level_1','eFG%_def','TOV%_def','DRB%_def','FT/FGA_def']
+
+            shooting_cols_team = ['Rk','Team','G','MP','FG%','Dist.','Unnamed: 6_level_1','pct_FGA_2P','pct_FGA_0-3','pct_FGA_3-10','pct_FGA_10-16','pct_FGA_16-3P','pct_FGA_3P','Unnamed: 13_level_1','fga_pct_2P','fga_pct_0-3','fga_pct_3-10','fga_pct_10-16','fga_pct_16-3P','fga_pct_3P','Unnamed: 20_level_1','pct_ast_2P', 'pct_ast_3P','Unnamed: 23_level_1','dunk_FGA%','dunk_Md.','Unnamed: 26_level_1','layup_FGA%','layup_Md.','Unnamed: 29_level_1','corner_%3PA','corner_3P%',"Unnamed: 32_level_1","heaves_att","heaves_md"]
+
+            shooting_cols_opponent = shooting_cols_team[:-3]
+
+            if "advanced" in css_id:
+                #stats_df = pd.read_html(str(self.soup.find('table', {"id": "advanced-team"})))[0]
+                stats_df.columns = advanced_cols
+                stats_df = stats_df.drop(['Unnamed: 15_level_1','Unnamed: 20_level_1'],axis=1).copy(deep=True)
+            elif css_id == "shooting-team":
+                # print(stats_df.columns)
+                # print(shooting_cols_team)
+                # print(len(stats_df.columns))
+                # print(len(shooting_cols_team))
+                stats_df.columns = shooting_cols_team
+                stats_df = stats_df.drop(['Unnamed: 6_level_1','Unnamed: 13_level_1','Unnamed: 20_level_1','Unnamed: 23_level_1','Unnamed: 26_level_1','Unnamed: 29_level_1','Unnamed: 32_level_1'],axis=1).copy(deep=True)
+            elif css_id == "shooting-opponent":
+                stats_df.columns = shooting_cols_opponent
+                stats_df = stats_df.drop(['Unnamed: 6_level_1','Unnamed: 13_level_1','Unnamed: 20_level_1','Unnamed: 23_level_1','Unnamed: 26_level_1','Unnamed: 29_level_1'],axis=1).copy(deep=True)
+
+            #stats_df["Team"] = stats_df["Team"].apply(lambda team_name: team_name.replace("*",""))
+            #stats_df = stats_df.iloc[:-1]
+            # print(stats_df)
+            stats_df = stats_df[~stats_df.isnull().T.any()]
+            return stats_df
+        
+        elif self.Url_type == 3:
             pass
 
-        def get_players_of_the_week(self):
-            pass
-
-        def get_players_of_the_month(self):
+        elif self.url_type == 4:
             pass
         
-        # https://www.basketball-reference.com/playoffs/NBA_2023.html
-        def get_playoff_per_game_stats():
-            pass
+        else:
+            # so, is this good user experience to do this? how do they know which method to use? get_stats is kinda all encompassing
+            raise Exception("Cannot use this method for this object")
 
-        def get_playoff_total_stats():
-            pass
+    def get_league_awards(self):
+        pass
 
-        def get_playoff_per_100_poss_stats():
-            pass
+    def get_players_of_the_week(self):
+        pass
 
-        def get_playoff_advanced_stats():
-            pass
+    def get_players_of_the_month(self):
+        pass
+    
+    # https://www.basketball-reference.com/playoffs/NBA_2023.html
+    def get_playoff_per_game_stats():
+        pass
 
-        def get_playoff_shooting_stats():
-            pass
+    def get_playoff_total_stats():
+        pass
 
-        # https://www.basketball-reference.com/leagues/NBA_2023_per_game.html
-        #how do I want to combine these? I can use probably one URL to get all this info
+    def get_playoff_per_100_poss_stats():
+        pass
 
-        def get_player_per_game_stats():
-            pass
+    def get_playoff_advanced_stats():
+        pass
 
-        def get_points_pg_leaders():
-            pass
+    def get_playoff_shooting_stats():
+        pass
 
-        def get_rebounds_pg_leaders():
-            pass
-        
-        def get_assists_pg_leaders():
-            pass
+    # https://www.basketball-reference.com/leagues/NBA_2023_per_game.html
+    #how do I want to combine these? I can use probably one URL to get all this info
 
-        def get_steals_pg_game_leaders():
-            pass
+    def get_player_per_game_stats():
+        pass
 
-        def get_blocks_pg_game_leaders():
-            pass
+    def get_points_pg_leaders():
+        pass
 
-        def get_field_goal_pct_leaders():
-            pass
+    def get_rebounds_pg_leaders():
+        pass
+    
+    def get_assists_pg_leaders():
+        pass
 
-        def get_free_throw_pct_leaders():
-            pass
+    def get_steals_pg_game_leaders():
+        pass
 
-        def get_3pt_field_goal_pct_leaders():
-            pass
+    def get_blocks_pg_game_leaders():
+        pass
 
-        def get_2pt_field_goal_pct_leaders():
-            pass
+    def get_field_goal_pct_leaders():
+        pass
 
-        def get_eff_field_goal_pct_leaders():
-            pass
-        
-        def get_minutes_pg_leaders():
-            pass
+    def get_free_throw_pct_leaders():
+        pass
+
+    def get_3pt_field_goal_pct_leaders():
+        pass
+
+    def get_2pt_field_goal_pct_leaders():
+        pass
+
+    def get_eff_field_goal_pct_leaders():
+        pass
+    
+    def get_minutes_pg_leaders():
+        pass
 
 # League Leaders Categories
 # points
