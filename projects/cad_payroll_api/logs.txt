@@ -1,0 +1,122 @@
+2023-06-11 19:56:33,512 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-06-11 19:56:33,512 - [33mPress CTRL+C to quit[0m
+2023-06-11 19:56:33,537 -  * Restarting with watchdog (windowsapi)
+2023-06-11 19:56:33,974 -  * Debugger is active!
+2023-06-11 19:56:33,974 -  * Debugger PIN: 370-009-016
+2023-06-11 19:56:46,472 - payroll_formulas.cpp_contributions() produced a reuslt of 55.49519230769231
+2023-06-11 19:56:46,472 - 127.0.0.1 - - [11/Jun/2023 19:56:46] "GET /payroll/cpp_contributions HTTP/1.1" 200 -
+2023-06-11 19:56:48,122 - payroll_formulas.cpp_contributions() produced a reuslt of 55.49519230769231
+2023-06-11 19:56:48,122 - 127.0.0.1 - - [11/Jun/2023 19:56:48] "GET /payroll/cpp_contributions HTTP/1.1" 200 -
+2023-06-11 19:57:54,030 -  * Detected change in 'C:\\Users\\choco\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\werkzeug\\user_agent.py', reloading
+2023-06-11 19:57:54,943 -  * Restarting with watchdog (windowsapi)
+2023-06-11 19:57:55,318 -  * Debugger is active!
+2023-06-11 19:57:55,318 -  * Debugger PIN: 370-009-016
+2023-06-11 19:57:57,922 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\app.py', reloading
+2023-06-11 19:57:57,934 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\app.py', reloading
+2023-06-11 19:57:57,934 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\app.py', reloading
+2023-06-11 19:57:58,436 -  * Restarting with watchdog (windowsapi)
+2023-06-11 19:57:58,869 -  * Debugger is active!
+2023-06-11 19:57:58,869 -  * Debugger PIN: 370-009-016
+2023-06-11 19:58:07,778 - 127.0.0.1 - - [11/Jun/2023 19:58:07] "GET /payroll/cpp_contributions HTTP/1.1" 200 -
+2023-06-11 19:58:26,158 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\app.py', reloading
+2023-06-11 19:58:26,158 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\app.py', reloading
+2023-06-11 19:58:26,165 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\app.py', reloading
+2023-06-11 19:58:27,210 -  * Restarting with watchdog (windowsapi)
+2023-06-11 19:58:27,731 -  * Debugger is active!
+2023-06-11 19:58:27,731 -  * Debugger PIN: 370-009-016
+2023-06-11 19:58:28,634 - 127.0.0.1 - - [11/Jun/2023 19:58:28] "GET /payroll/cpp_contributions HTTP/1.1" 200 -
+2023-06-11 19:58:50,589 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\app.py', reloading
+2023-06-11 19:58:50,589 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\app.py', reloading
+2023-06-11 19:58:50,589 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\app.py', reloading
+2023-06-11 19:58:50,966 -  * Restarting with watchdog (windowsapi)
+2023-06-11 19:58:51,397 -  * Debugger is active!
+2023-06-11 19:58:51,397 -  * Debugger PIN: 370-009-016
+2023-06-11 19:59:01,853 - payroll_formulas.cpp_contributions() produced a reuslt of 114.99519230769229
+2023-06-11 19:59:01,853 - 127.0.0.1 - - [11/Jun/2023 19:59:01] "GET /payroll/cpp_contributions HTTP/1.1" 200 -
+2023-06-11 19:59:10,514 - payroll_formulas.cpp_contributions() produced a reuslt of 114.99519230769229
+2023-06-11 19:59:10,514 - 127.0.0.1 - - [11/Jun/2023 19:59:10] "GET /payroll/cpp_contributions HTTP/1.1" 200 -
+2023-06-11 19:59:13,135 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\app.py', reloading
+2023-06-11 19:59:13,141 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\app.py', reloading
+2023-06-11 19:59:13,654 -  * Restarting with watchdog (windowsapi)
+2023-06-11 19:59:14,150 -  * Debugger is active!
+2023-06-11 19:59:14,157 -  * Debugger PIN: 370-009-016
+2023-06-11 19:59:15,967 - payroll_formulas.cpp_contributions() produced a reuslt of 114.99519230769229
+2023-06-11 19:59:15,967 - 127.0.0.1 - - [11/Jun/2023 19:59:15] "GET /payroll/cpp_contributions HTTP/1.1" 200 -
+2023-06-11 19:59:21,104 - payroll_formulas.cpp_contributions() produced a reuslt of 55.49519230769231
+2023-06-11 19:59:21,111 - 127.0.0.1 - - [11/Jun/2023 19:59:21] "GET /payroll/cpp_contributions HTTP/1.1" 200 -
+2023-06-11 19:59:26,309 - payroll_formulas.cpp_contributions() produced a reuslt of 768.4836923076923
+2023-06-11 19:59:26,309 - 127.0.0.1 - - [11/Jun/2023 19:59:26] "GET /payroll/cpp_contributions HTTP/1.1" 200 -
+2023-06-13 01:37:02,854 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-06-13 01:37:02,854 - [33mPress CTRL+C to quit[0m
+2023-06-13 01:37:02,881 -  * Restarting with watchdog (windowsapi)
+2023-06-13 01:37:03,332 -  * Debugger is active!
+2023-06-13 01:37:03,342 -  * Debugger PIN: 370-009-016
+2023-06-13 01:37:11,083 - 127.0.0.1 - - [13/Jun/2023 01:37:11] "GET /payroll/cpp_contributions HTTP/1.1" 200 -
+2023-06-13 01:44:06,341 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\data_validation.py', reloading
+2023-06-13 01:44:07,366 -  * Restarting with watchdog (windowsapi)
+2023-06-13 01:44:07,842 -  * Debugger is active!
+2023-06-13 01:44:07,846 -  * Debugger PIN: 370-009-016
+2023-06-13 01:44:13,573 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\db_functions_test.py', reloading
+2023-06-13 01:44:13,963 -  * Restarting with watchdog (windowsapi)
+2023-06-13 01:44:14,454 -  * Debugger is active!
+2023-06-13 01:44:14,458 -  * Debugger PIN: 370-009-016
+2023-06-13 01:45:06,564 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\data_validation.py', reloading
+2023-06-13 01:45:06,568 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\data_validation.py', reloading
+2023-06-13 01:45:07,038 -  * Restarting with watchdog (windowsapi)
+2023-06-13 01:45:07,660 -  * Debugger is active!
+2023-06-13 01:45:07,664 -  * Debugger PIN: 370-009-016
+2023-06-13 01:45:25,674 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\data_validation.py', reloading
+2023-06-13 01:45:25,678 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\data_validation.py', reloading
+2023-06-13 01:45:25,939 -  * Restarting with watchdog (windowsapi)
+2023-06-13 01:45:26,407 -  * Debugger is active!
+2023-06-13 01:45:26,407 -  * Debugger PIN: 370-009-016
+2023-06-13 01:46:24,312 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\data_validation.py', reloading
+2023-06-13 01:46:24,320 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\data_validation.py', reloading
+2023-06-13 01:46:25,042 -  * Restarting with watchdog (windowsapi)
+2023-06-13 01:46:25,454 -  * Debugger is active!
+2023-06-13 01:46:25,458 -  * Debugger PIN: 370-009-016
+2023-06-13 01:46:33,498 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\data_validation.py', reloading
+2023-06-13 01:46:33,499 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\data_validation.py', reloading
+2023-06-13 01:46:33,500 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\data_validation.py', reloading
+2023-06-13 01:46:33,640 -  * Restarting with watchdog (windowsapi)
+2023-06-13 01:46:34,160 -  * Debugger is active!
+2023-06-13 01:46:34,160 -  * Debugger PIN: 370-009-016
+2023-06-13 01:59:08,366 -  * Detected change in 'C:\\Users\\choco\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\flask\\__init__.py', reloading
+2023-06-13 01:59:08,393 -  * Detected change in 'C:\\Users\\choco\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\flask\\globals.py', reloading
+2023-06-13 01:59:08,495 -  * Restarting with watchdog (windowsapi)
+2023-06-13 01:59:09,021 -  * Debugger is active!
+2023-06-13 01:59:09,024 -  * Debugger PIN: 370-009-016
+2023-06-13 02:00:20,515 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-06-13 02:00:20,515 - [33mPress CTRL+C to quit[0m
+2023-06-13 02:00:20,536 -  * Restarting with watchdog (windowsapi)
+2023-06-13 02:00:20,994 -  * Debugger is active!
+2023-06-13 02:00:20,994 -  * Debugger PIN: 370-009-016
+2023-06-13 02:00:24,193 - 127.0.0.1 - - [13/Jun/2023 02:00:24] "[31m[1mGET /payroll/cpp_contributions HTTP/1.1[0m" 400 -
+2023-06-13 02:01:02,391 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\app.py', reloading
+2023-06-13 02:01:02,392 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\app.py', reloading
+2023-06-13 02:01:02,396 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\app.py', reloading
+2023-06-13 02:01:02,458 -  * Restarting with watchdog (windowsapi)
+2023-06-13 02:01:02,945 -  * Debugger is active!
+2023-06-13 02:01:02,950 -  * Debugger PIN: 370-009-016
+2023-06-13 02:01:09,813 - 127.0.0.1 - - [13/Jun/2023 02:01:09] "[31m[1mGET /payroll/cpp_contributions HTTP/1.1[0m" 400 -
+2023-06-17 10:21:50,763 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-06-17 10:21:50,763 - [33mPress CTRL+C to quit[0m
+2023-06-17 10:21:50,793 -  * Restarting with watchdog (windowsapi)
+2023-06-17 10:21:51,267 -  * Debugger is active!
+2023-06-17 10:21:51,273 -  * Debugger PIN: 370-009-016
+2023-06-17 10:21:54,465 - 127.0.0.1 - - [17/Jun/2023 10:21:54] "[31m[1mGET /payroll/cpp_contributions HTTP/1.1[0m" 400 -
+2023-06-17 10:22:07,714 -  * Detected change in 'C:\\Users\\choco\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\typing.py', reloading
+2023-06-17 10:22:08,507 -  * Restarting with watchdog (windowsapi)
+2023-06-17 10:22:09,089 -  * Debugger is active!
+2023-06-17 10:22:09,093 -  * Debugger PIN: 370-009-016
+2023-06-17 10:22:35,229 - 127.0.0.1 - - [17/Jun/2023 10:22:35] "[31m[1mGET /payroll/cpp_contributions HTTP/1.1[0m" 400 -
+2023-06-17 10:22:43,594 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\app.py', reloading
+2023-06-17 10:22:43,594 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\app.py', reloading
+2023-06-17 10:22:44,520 -  * Restarting with watchdog (windowsapi)
+2023-06-17 10:22:45,032 -  * Debugger is active!
+2023-06-17 10:22:45,036 -  * Debugger PIN: 370-009-016
+2023-06-17 10:22:47,662 - 127.0.0.1 - - [17/Jun/2023 10:22:47] "[31m[1mGET /payroll/cpp_contributions HTTP/1.1[0m" 400 -

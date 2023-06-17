@@ -1,0 +1,579 @@
+Payroll Codes -> Earnings Codes and Deduction Codes
+
+Code Examples
+120 	WSIB 	Workplace Safety 	 
+121 	EHT 	Employer Health Tax 	 
+160 	EI REG 	E.I. Regular Rate 	 
+161 	EI RED 	E.I. Reduced Rate 	 
+170 	Prov Tax 	Ontario Provincial Income tax 	 
+172 	Prov Tax 	Ontario Provincial Income Tax 	 
+180 	CPP 	Canadian Pension Plan 	 
+190 	Fed Tax 	Canadian Federal Tax 	 
+192 	Fed Tax 	Canadian Federal Tax 	 
+195 	NRIncTax 	Non Resident 	 
+200 	Life R1 	Basic Life (ER portion) 	up to August 15th 2014
+201 	Life E1 	Basic Life (EE portion) 	up to August 15th 2014
+202 	Life E2 	Basic Life (EE-both portions) 	up to August 15th 2014
+203 	Life R2 	Basic Life (ER-both portions) 	up to August 15th 2014
+204 	Life R3 	Basic Life GFT (ER portion) 	up to August 15th 2014
+205 	Life E3 	Basic Life GFT (EE portion) 	up to August 15th 2014
+206 	Life E4 	Basic Life GFT (EE-both parts) 	up to August 15th 2014
+207 	Life R4 	Basic Life GFT (ER-both parts) 	up to August 15th 2014
+210 	Life R5 	Basic Life Retiree (ER) 	up to August 15th 2014
+211 	Life PU 	Basic Life Insurance Paid Up 	up to August 15th 2014
+215 	Base Life 	Basic Life (EE portion) 	 
+216 	Base Life 	Basic Life (ER portion) 	 
+217 	Base Life 	Basic Life Retiree (ER) 	 
+220 	HealthR1 	Extended Health Care (ER) 	up to August 15th 2014
+221 	HealthE1 	Extended Health Care (EE) 	up to August 15th 2014
+222 	Ohosp E1 	Optional Hospital (EE) 	up to August 15th 2014
+223 	Ohosp R1 	Optional Hospital (ER) 	up to August 15th 2014
+224 	Health1 	APTPUO Extended Health Care 	up to August 15th 2014
+225 	HealthR2 	Extended Health Care APUO (ER) 	up to August 15th 2014
+226 	H. & O.H. 	Extended Health Care and Optional Hosp. (EE) 	 
+227 	H. & O.H. 	Extended Health Care and Optional Hosp. (ER) 	 
+230 	HealthE2 	Extended Health Care Retiree 	up to August 15th 2014
+231 	Ohosp E2 	Optional Hospital Retiree 	up to August 15th 2014
+240 	Bdent R1 	Basic Dental Support (ER) 	up to August 15th 2014
+241 	Bdent R2 	Basic Dental Academic (ER) 	up to August 15th 2014
+242 	Bdent E1 	Basic Dental Support (EE) 	up to August 15th 2014
+243 	Bdent E2 	Basic Dental Academic (EE) 	up to August 15th 2014
+244 	Bdent E3 	Basic Dental Support Retiree 	up to August 15th 2014
+245 	Bdent E4 	Basic Dental Academic Retiree 	up to August 15th 2014
+246 	Bdent E5 	Basic Dent Post/RA (EE) 	up to August 15th 2014
+247 	Bdent R3 	Basic Dental APUO (ER) 	up to August 15th 2014
+248 	Bdent E6 	Basic Dental CUPE (EE) 	up to August 15th 2014
+250 	Dental 	Dental (EE) 	 
+251 	Dental 	Dental (ER) 	 
+260 	Odent E1 	Optional Dental (EE) 	up to August 15th 2014
+261 	Odent R1 	Optional Dental (ER) 	up to August 15th 2014
+262 	Odent E2 	Optional Dental Retiree 	up to August 15th 2014
+263 	Odent E3 	Optional Dental Post/RA (EE) 	up to August 15th 2014
+264 	Odent E4 	Optional Dental CUPE (EE) 	up to August 15th 2014
+270 	LTD  	Long Term Disability (EE) 	 
+271 	LTD  	Long Term Disability (ER) 	 
+272 	LTD T-U 	Long Term Disability Silver or Gold (EE) 	 
+273 	LTD T-U 	Long Term Disability Silver or Gold (ER) 	 
+280 	LTD R1 	Long Term Disability (ER) 	up to August 15th 2014
+281 	LTD E1 	Long Term Disability (EE) 	up to August 15th 2014
+282 	LTD E2 	Long Term Disability GFT (EE) 	up to August 15th 2014
+283 	LTD-Bron 	LTD Base APUO (ER) 	up to August 15th 2014
+284 	LTD-Silv 	LTD Silver APUO (EE) 	up to August 15th 2014
+285 	LTD-Gold 	LTD Gold APUO (EE) 	up to August 15th 2014
+286 	LTD E3 	LTD Base APUO (EE) 	up to August 15th 2014
+287 	LTD R2 	Long Term Disability GFT (ER) 	up to August 15th 2014
+288 	LTD-Bron 	LTD Base (ER) 	up to August 15th 2014
+289 	LTD-Silv 	LTD Silver (EE) 	up to August 15th 2014
+290 	LTD-Gold 	LTD Gold (EE) 	up to August 15th 2014
+291 	LTD E3 	LTD Base (EE) 	up to August 15th 2014
+295 	Op Life 	Optional Life (Employee, Spouse, Dependent) (EE) 	 
+296 	Op Life 	Optional Life (Employee, Spouse, Dependent) (ER) 	 
+301 	SalRepB 	Salary Replacement .4% (ER) 	up to August 15th 2014
+310 	OLifeE1 	Employee Optional Life (EE) 	up to August 15th 2014
+311 	SOlifeE1 	Spousal Optional Life (EE) 	up to August 15th 2014
+312 	Olife R1 	Employee Optional Life (ER) 	up to August 15th 2014
+313 	SOLifeR1 	Spousal Optional Life (ER) 	up to August 15th 2014
+314 	DepLifeE 	Dependent Optional Life (EE) 	up to August 15th 2014
+315 	DepLifeR 	Dependent Optional Life (ER) 	up to August 15th 2014
+316 	GDepLifE 	Grandfathered Dep Life (EE) 	up to August 15th 2014
+320 	ADD S E 	Acc Death & Dism - Single (EE) 	up to August 15th 2014
+321 	ADD F E 	Acc Death & Dism - Family (EE) 	up to August 15th 2014
+322 	ADD S R 	Acc Death & Dism - Single (ER) 	up to August 15th 2014
+323 	ADD F R 	Acc Death & Dism - Family (ER) 	up to August 15th 2014
+325 	ADD S E 	Acc Death & Dism - (EE) 	 
+326 	ADD F R 	Acc Death & Dism - (ER) 	 
+330 	UHIP Pay 	UHIP (EE) 	up to August 15th 2014
+331 	UHIP Tax 	UHIP RST (EE) 	up to August 15th 2014
+340 	HSSA 1  	HSSA Retired Support Staff 	 
+341 	HSSA 2 	HSSA Retired Academic Initial 	 
+342 	HSSA 3 	HSSA Retired Acad Additional 	 
+343 	HSSA 4 	HSSA Active APUO 	 
+344 	HSSA 5 	HSSA Active APUO Additional 	 
+345 	HSSA 6 	HSSA Active APUO 65+Additional 	 
+346 	HSSA 7 	HSSA Active APUO 65+ 	 
+347 	HSSA 4 	HSSA Active 	 
+348 	HSSA 5 	HSSA Active Addl. 	 
+350 	PC-Cosmo 	Computer Purchase Plan-Cosmos 	 
+351 	PC-IBM 	Computer Purchase Plan-IBM 	 
+355 	Moving 	Moving Exp. Reimbursement 	 
+370 	HSSADv70 	HSSA Active APUO (div 70) 	 
+371 	HSSADv71 	HSSA Active APUO (div 71) 	 
+372 	HSSADv72 	HSSA Active APUO (div 72) 	 
+373 	HSSADv73 	HSSA Active APUO (div 73) 	 
+374 	HSSADv74 	HSSA Active APUO 65+ (div 74) 	 
+375 	HSSADv75 	HSSA Active APUO 65+ (div 75) 	 
+376 	HSSADv76 	HSSA Active APUO 65+ (div 76) 	 
+377 	HSSADv40 	HSSA Active (div 40) 	 
+378 	HSSADv41 	HSSA Active (div 41) 	 
+379 	HSSADv42 	HSSA Active (div 42) 	 
+380 	HSSADv43 	HSSA Active (div 43) 	 
+390 	RST Ma R 	RST Manulife ON (ER) 	up to August 15th 2014
+391 	RST Ma E 	RST Manulife (EE) 	up to August 15th 2014
+392 	RST AI R 	RST AIG ON (ER) 	up to August 15th 2014
+393 	RST AI E 	RST AIG (EE) 	up to August 15th 2014
+400 	PenReg1 	Regular Pension (EE & ER) 	 
+401 	PenReg2 	Regular Pension (EE & ER) (ch) 	 
+402 	PenRegE1 	Reg Pension (EE both portions) 	 
+403 	PenRegE2 	Reg Pension (EE both parts ch) 	 
+404 	PenRWL1 	Reg Pension RWL (EE both part) 	 
+405 	PenRWL2 	Reg Pen. RWL (EE both part.ch) 	 
+406 	Pen BB L 	Reg Pension BuyBack EE BWURP 	 
+407 	Pen BB J 	Reg Pension BuyBack EE BWURP 	 
+408 	Pen BB K 	Reg Pension BuyBack EE BWURP 	 
+409 	Pen BB Q 	Reg Pension BuyBack EE PSOU1 	 
+410 	Pen BB P 	Reg Pension BuyBack EE PSOU1 	 
+411 	Pen BB R 	Reg Pension BuyBack EE PSOU1 	 
+412 	Pen BB T 	Reg Pension BuyBack EE PSOU2 	 
+413 	Pen BB S 	Reg Pension BuyBack EE PSOU2 	 
+414 	Pen BB U 	Reg Pension BuyBack EE PSOU2 	 
+415 	Pen BB A 	Reg Pension Buy Back EE PSWU1 	 
+416 	Pen BB B 	Reg Pension Buy Back EE PSWU1 	 
+417 	Pen BB C 	Reg Pension Buy Back EE PSWU1 	 
+418 	Pen BB F 	Reg Pension Buy Back EE PSWU2 	 
+419 	Pen BB E 	Reg Pension Buy Back EE PSWU2 	 
+420 	Pen BB D 	Reg Pension Buy Back EE PSWU2 	 
+421 	Pen BB G 	Reg Pension Buy Back EE WUSCP 	 
+422 	Pen BB I 	Reg Pension Buy Back EE WUSCP 	 
+423 	Pen BB H 	Reg Pension Buy Back EE WUSCP 	 
+424 	Pen BB M 	Reg Pension BuyBack EE CURS2 	 
+425 	Pen BB N 	Reg Pension BuyBack EE CURS2 	 
+426 	Pen BB O 	Reg Pension BuyBack EE CURS2 	 
+427 	PenBB V 	Reg Pension BuyBack EE PARS2 	 
+428 	PenBB X 	Reg Pension BuyBack EE PARS2 	 
+429 	PenBB W 	Reg Pension BuyBack EE PARS2 	 
+430 	PenSup 	Supplemental Pension (EE & ER) 	 
+431 	PenSupE1 	Supp Pension (EE both parts) 	 
+432 	PenSupRW 	Supp Pension RWL(EE both parts) 	 
+460 	PenAPTPU 	Pension APTPUO (EE & ER) 	 
+465 	PenExe 	Executive Pension 	 
+467 	PenRegR1 	Reg Pension (ER both portions) 	 
+468 	PenRegR2 	Reg Pension (ER both port. ch) 	 
+469 	PenSupR1 	Supp Pension-ER both portions 	 
+470 	PenRegOT 	Regular Pension (EE & ER) OT 	 
+472 	PenEOT 	Reg Pen (EE both portions)OT 	 
+474 	PenRWLOT 	Reg Pen RWL (EE both port) OT 	 
+476 	PenSupOT 	Supplemental Pen (EE & ER) OT 	 
+478 	PenSEOT 	Supp Pension (EE both parts)OT 	 
+480 	PenSRWOT 	Supp Pen RWL (EE both port) OT 	 
+482 	PenAPTOT 	Pension APTPUO (EE & ER) OT 	 
+484 	PenExeOT 	Pension Executive EE OT 	 
+614 	APUO Brs 	APUO Bursary 	 
+619 	APUO Fee 	APUO Fee on retirement or term 	 
+650 	772B Due 	Union 772-B/Grounds/trades/tra 	 
+652 	APUO Dues 	APUO Dues 	 
+653 	772A Due 	Union 772-A Operating Engineer 	 
+654 	APTPUO D 	Union Dues APTPUO 	 
+658 	CUPE Dues 	CUPE Union Dues 	 
+659 	CUPE Brs 	CUPE Union Dues/ bursary 	 
+661 	Non-CUPE 	CUPE Union Dues 	 
+662 	CUPE LG 	CUPE Lifeguard 	 
+665 	OSSTF 	OSSTF Union Dues 	 
+666 	PIPSC 	PIPSC Union Dues 	 
+725 	Bonds 	Canada Savings Bonds 	 
+730 	Tuition 	Tuition Fee Graduate Student 	up to August 15th 2014
+740 	ResidFee 	Residence Fees 	 
+750 	U Way ON 	United Way Ontario 	 
+752 	S&E Burs 	Sci. & Eng. Bursary & Prize 	 
+753 	Fund 	Fund Raising Campaign 	 
+754 	Camp Cam 	Campus Campaign 	 
+770 	OCTransp 	OC Transpo 	up to August 15th 2014
+771 	OCTRural 	OC Transpo Ecopass Rural 	up to August 15th 2014
+772 	OCT Eco+ 	Oc Transpo Ecopass Plus 	up to August 15th 2014
+773 	STO Reg 	STO Regular 	 
+774 	STO Reg 	STO Regular 	 
+775 	STO Reg 	STO Regular 	 
+776 	STO Sen 	STO Seniors 	 
+780 	Park-MAN 	Parking Mann Indoors 	 
+781 	Park-LAU 	Parking Laurier Inside 	 
+782 	Park-BRK 	Parking Brooks 	 
+783 	Park-HSc 	Parking Health Science 	 
+784 	Park-CMP 	Parking Campus 	 
+785 	Park-PRZ 	Parking Perez 	 
+786 	Park-Mor 	Parking Peter Morand 	 
+787 	Park-Lee 	Parking 200 Lees 	 
+788 	HST-Park 	HST on Parking 	 
+789 	GST-Park 	GST on Parking 	 
+790 	Park Dem 	Parking Desmarais 	 
+800 	LiensCRA 	Liens CRA 	 
+801 	LiensFam 	Liens Family Support 	 
+802 	LiensCrt 	Liens Provincial Court 	 
+850 	VacAcc 	4% Vacation Accrued
+
+Earning Code Definition Deduction Code Definition
+Back Up Hours Back-Up Hours Worked AD&D Accidental Death and Dismemberment
+Back Up Premium premium paid at $2.50/hour Blackberry Deduction for PDA
+Bereavement Bereavement time paid CPP Canadian Pension Plan
+Call Back Call Back Dental Deduction for dental benefits
+Discretionary Time Taken Discretionary Time Edreams Employee requested deduction for everyday dreams
+GAP hour paid for Gap time EI Employment insurance
+H&S Meeting Health and Safety Meeting Extended Health Deduction for health care benefits
+Hands on Training Hands On Training (example back care) Extra Tax Extra tax deducted as requested on employees TD1 form
+In Lieu of Benefits 8% of earning paid in lieu of benefits for PT employees Gift fund Employee requested deduction for Gift fund
+JURY Time paid for Jury Duty Globe M Employee requested deduction for Globe M
+Lieu Time Taken Banked TL Hours to be Paid Good life Employee requested deduction for Goodlife fitness membership
+Meeting Non union Meetings Income Tax Income Tax deduction
+On Call Premium paid for carrying on call pager London Life Non Union Pension plan
+On Call Weekend Weekend On-Call paid at flat rate LTD Long Term Disability
+Orientation Orientation Miscellaneous payroll adjustment for cheque issued
+Overtime 0.5 Overtime hours paid at half time NHRIPP - LONDON Union Pension Plan
+Paid Not Worked Time time paid for hours not worked NHRIPP - OXFORD Union Pension Plan
+Regular Regular pay SEIU Union Dues Union Dues
+Reporting Pay Reporting Pay SEIU union Dues initiation fee one time initiation fee deduction for union
+Retro Manual Worked Retroactive pay adjustment for increase to hourly rate STD Short Term Disability
+Sick Taken Sick Time paid Taxable Life Taxable life insurance
+Staff Development Staff Development TRE Manual deduction for training manual
+STAT ESA Paid out Stat time paid for PT Employees
+Stat worked 1.0 Statutory Holiday hours paid at straight time
+Stat worked 0.5 Statutory Holiday paid at half time
+Temporary Attendant Service Hou TAS Paid Hourly
+Temporary Attendant Service Day TAS Daily flat Rate
+Travel Expense Expenses paid for travel (i.e. Parking)
+Travel KM Mileage Reimbursement
+Travel KM adjustment Mileage re-imbursement paid though payroll travel expense form or adjustment
+Travel Time Travel Time paid at hourly rate
+Vacation Allotment $ Taken Union Vacation
+Vacation Allotment Hours Taken Non-Union Vacation
+New Years day Taken Time paid for stat holiday
+Family day Taken Time paid for stat holiday
+Good Friday Taken Time paid for stat holiday
+Victoria Day Taken Time paid for stat holiday
+Canada Day taken Time paid for stat holiday
+Civic Holiday Taken Time paid for stat holiday
+Labour Day taken Time paid for stat holiday
+Thanksgiving day taken Time paid for stat holiday
+Christmas day taken Time paid for stat holiday
+Boxing day taken Time paid for stat holiday
+Earnings
+Description on Pay Advice
+Acad @$25 Academic Allowance @ $25/Month
+Vac Lv Tkn Vacation Leave Taken (code AO1)
+Vac Lv Pyt Vacation Leave Payout (code AO2)
+Late-AWOL Late - Absent Without Leave (code AW1)
+AWOL+1/2dy Absent Without Leave over 1/2 day (code AW2)
+BiB 37.50 Bilingual Bonus for 37.5/week workers
+BiB 40 hrs Bilingual Bonus for 40/week workers
+CB 4hrs ST Callback first 4hrs at straight time (code CB1)
+CB2nd in 8 Callback at time-and-a-half (code CB2)
+CB 2.0 Callback at double time (code CB3)
+Banked CB/ Banked Call Back Taken (code CB4)
+BCB P/O Banked Call Back payout (code CB5)
+CBH T&L Call Back Hours Earned (code CBE)
+Commute Commuting Allowance over 8km (code CMA)
+Civic Lv. Civic Leave (code CV1)
+Civic NoPa Civic Leave No Pay (code CV2)
+Elect CB Electronic Call Back (code ECB)
+Commit Wrk Committee Work (HB) 8U (code ED1)
+Comm Serv Community Service (HB) 8U (code ED2)
+Convention Convention/Seminars (HB) 8U (code ED3)
+Ed-Extramu Education - Extramural (HB) 8U (code ED4)
+Ed-Inservc Education - Inservice (HB) 8U (code ED5)
+Ed-Orientn Education -Orientation (HB) 8U (code ED6)
+Excl Bonus Excluded Bonus
+Extra Duty Extra Duty Pay Territorial Teachers Association (code EDP)
+GR @ 1.0 General Relief 1 @ 1.0 (code GR1)
+GR1 @ 1.5 General Relief 1 @ 1.5 (code GR2)
+GR1 @ 2.0 General Relief 1 @ 2.0 (code GR3)
+HWR @ 1.0 Heavy Work Relief @ 1.0 (code HW1)
+HWR @ 1.5 Heavy Work Relief @ 1.5 (code HW2)
+HWR @ 2.0 Heavy Work Relief @ 2.0 (code HW3)
+PLWOP<3mth Personal Leave Without Pay for less than or equal to 3 months (code LO1)
+PLWOP>3m Personal Leave Without Pay for greater than 3 months (code LO2)
+Sick LWOP Sick Leave Without Pay (code LO4)
+Mandtry Lv Mandatory Leave With Pay (code LO9)
+Lieu Taken Lieu Hours Taken (code LT2)
+Lieu Pyout Lieu Time Payout (code LT3)
+Lieu Earnd Lieu Hours Earned (code LTE)
+Nrth Allow Northern Allowance
+NS1 $ Nurses Special Allowance
+OT @ 1.5 Overtime at time-and-a-half (code OT1)
+OT x 2.0 Overtime at double time (code OT2)
+OT @ Reg. Overtime at straight time (code OT3)
+ProfDv Day Professional Development Days (code PD1)
+RSA OT1 10 Responsibility Allowance for overtime hours earned at OT1 @10% (code RD1A)
+RSA OT1 12 Responsibility Allowance for overtime hours earned at OT1 @12% (code RD1B)
+RSA OT2 10 Responsibility Allowance for overtime hours earned at OT2 @10% (code RD2A)
+RSA OT2 12 Responsibility Allowance for overtime hours earned at OT2 @12% (code RD2B)
+Regular Regular (code REG)
+Reg @ 1.5 3rd Weekend Worked up to 4 hours at time-and-a-half (code OP1)
+Reg @ 2.0 3rd Weekend Worked over 4 hours at double time (code OP2)
+Relief 16% Relief Bank 16% Earnings
+Relief Pay Relief Bank Payout
+RSA 8U 10%
+Responsibility Allowance at 10% for periods of less than or equal to 5 days
+(code RSD)
+RA 8DE 10%
+Responsibility Allowance at 10% for periods of less than or equal to 5 days
+(code RSDA)
+RSA 8U 12% Responsibility Allowance at 12% for periods of greater than 5 days (code RSDB)
+RA 8DE 12% Responsibility Allowance at 12% for periods of greater than 5 days (code RSDC)
+RA4/6U 10%
+Responsibility Allowance at 10% for periods of less than or equal to 5 days
+(code RSDD)
+RA4/6U 12% Responsibility Allowance at 12% for periods of greater than 5 days (code RSDE)
+RA4/6E 10% Responsibility Allowance at 10% for periods of less than or equal to 5 days
+RA4/6E 12% Responsibility Allowance at 12% for periods of greater than 5 days
+Standby Un Standby Shift on a day of rest (code SBU)
+Standby Wk
+Standby Shift on a day when a regularly scheduled shift was worked (code
+SBW)
+Stat Holid Statutory Holiday (pays automatically; or code SH2)
+StatLvP/O Statutory Holiday Leave Payout (code SH3)
+SHTaken RB Statutory Holiday Bank hours used (from code SH4)
+Shift Prem Shift Premium (code PS2)
+Sick Lv Sick Leave (code SL1)
+Paid Susp Suspension With Pay (code SP1)
+NtPd Sspsn Suspension With Out Pay (code SP2)
+SkRl @ 1.0 Sick Relief at straight time (code SR1)
+SkRL @ 1.5 Sick Relief at time-and-a-half (code SR2)
+SkRl @ 2.0 Sick Relief at double time (code SR3)
+Stat Relief @ 1.0 Stat Relief at straight time (code ST1)
+Stat Relief @ 1.5 Stat Relief at time-and-a-half (code ST2)
+Stat Relief @ 2.0 Stat Relief at double time (code ST3)
+S Wear Safety Wear Union of Northern Workers Article 46 (code HSW)
+Princ.#Stu
+Principal Number of Students Allowance (see NWTTA Collective Agreement
+Article A4.01)
+PrincExtra Principal Extra Student Allow
+VP Extra Vice Principal Extra Students
+VP#Student Vice-Principal Number of Students Allowance
+VP Allow Vice-Principal Allow (for when acting for principal)
+Lang Allow Language Allowance
+TTA EX Pay Territorial Teachers’ Association Extra Duty Pay
+TTA Mentor Territorial Teachers’ Association Mentoring Allowance
+Tool Allow Union of Northern Workers Tool Allowance (code TOA)
+Uniform Al Uniform Allowance
+UnLvNonBil Union Leave Non-Billable
+Vacation P Vacation Pay 6% for some employees in a Job Share
+VR @ 1.0 Vacation Relief @ 1.0 (code VR1)
+VR @ 1.5 Vacation Relief @ 1.5 (code VR2)
+VR @ 2.0 Vacation Relief @ 2.0 (code VR3)
+Wntr Bonus Winter Bonus Days (code WO1)
+Wk St @2.0
+Worked Stat at double time - for Health Board workers with Stat Banks (code
+WS2)
+Wknd Prem Weekend Premium (code PS3)
+Taxes
+CIT Canadian Income Tax (Federal)
+CPP Canadian Pension Plan
+EI Employment Insurance
+NWT Payroll Northwest Territories Income Tax (Territorial)
+Deductions and Benefits
+PSHCP Public Service Health Care Plan
+Dental Dental Plan
+BLIFE Basic Life Insurance
+BLife ERPD Basic Life Insurance Employer Paid portion
+SUPLIFE Supplementary Life Insurance
+Dep.AD&D Dependant Accidental Death and Dismemberment Insurance
+Dep.Life Dependant Life Insurance
+SDB Supplementary Death Benefit
+AD&D Accidental Death & Dismemberment
+NWTTA Dues Northwest Territories Teachers Association union dues
+UNW Dues Union of Northern Workers union dues
+TDInvoice Territorial Debt Invoice raised – you owe the GNWT money, e.g. child support
+payment
+EI Ben Sup Employment Insurance Benefit Sub Plan – deduction of the EI portion of
+Maternity / Parental Leave
+Net Rec Net Recovery Pay Receivable – you owe your department money, e.g. you were
+overpaid
+LTD Long Term Disability insurance
+PSAC GrLif Public Service Alliance of Canada Group Life Insurance
+DI Disability Insurance
+CPSP Canada Payroll Savings Plan
+Dep Lif ER Dependent Life Employer Paid portion
+DSL CPP ER Deferred Salary Canada Pension Plan Employer share – pension adjustment for
+employees on deferred salary
+ReqPay Requirement to Pay
+Garnish Garnishment
+Demand Third Party Maintenance – child support
+SJFUND UNW Social Justice Fund – Union of Northern Workers www.psac-sjf.org/home.cfm
+New Pen Pension Deduction for Superannua
+
+Abbreviation and acronym 	Description
+(H) 	Hourly
+(S) 	Salaried
+Ad Earn 	Additional Earnings
+Add 	Additional
+ADI 	Alternate Delivery Initiative
+Adj 	Adjustment
+Adj-Comp 	Adjustment Compensatory
+Adm 	Administrative
+All/Allow 	Allowance
+Alter LS 	alternative lump sum
+Bas 	Basic
+CNV 	Conversion
+Comp 	Compensation
+Comm Diff 	Commission Differential
+Comp for Pen Reduc - Eli 	Compensation for Pension Reduction
+CSN 	Canadian Nuclear Safety Commission
+CX 	Correctional Services
+DI/DB 	Disability Insurance/Death Benefits
+Diff 	Differential
+E Sep Ben Adj Not Elig 	Equity Separation Benefits Adjustment Non Eligible
+Earn 	Earnings
+Edu 	Education
+Edu All 	Educational Allowance
+ENR 	National Energy Board
+Equ Sal Adj – Non Pen 	Equity Salary Adjustment-Non-pensionable
+Exp 	Expenses
+FY-1-N Pen 	Fiscal Year 1 Non-pensionable
+Hi 	Higher
+HOC 	House of Commons
+Infl 	Inflatable
+IOG 	Indian Oil and Gas Canada
+LIA 	Leave with income averaging
+LS 	Lump sum
+LWOP 	Leave without pay
+Med Rem Supp Prev Year - BC 	Medicare Remunerations Supplements Previous Year - British Columbia
+MP 	Members of Parliament
+MPRA 	Members of Parliament Retiring Allowances
+NBC 	National Battlefield Commission
+Non Eli/Elig 	Non-eligible/Eligible
+Non Pen N-Pen 	Non-pensionable
+NT 	Non-taxable
+OT 	Overtime
+PE 	Personnel Administration
+Pen 	Pensionable
+Prem 	Premium
+Pr Ngt 	Premium Night
+PSSA 	Public Service Superannuation Act
+Quart 	Quarters
+RCA 	Retirement Compensation Arrangement
+Reg 	Regular
+Retro 	Retroactivity
+ROC 	Return of Contribution
+SC 	Ships Crew
+Sec 	Second
+Sep Ben 	Separation benefit
+SO 	Ship’s Officer
+Subs 	Subsequent
+Sup BC 	Supplementary - British Columbia
+Ter EE 	Term Employees
+TR 	Translation Group
+TSM 	Transition Support Measure
+Vac 	Vacation
+Vol 	Volunteer
+Deductions
+Table 2: List of deductions abbreviations and acronyms Abbreviation and acronym 	Description
+Acc 	Accountable
+AD/D 	Accidental Death/Dismemberment
+Adv 	Advance
+Arr 	Arrears
+BEN/Ben 	Benefits
+Can Assn of Prof Empl (CAPE) 	Canadian Association of Professional Employees
+Can Forces 	Canadian Forces
+Can Union of Pub Emp (CUPE) 	Canadian Union of Public Employees
+CEP 	Communications, Energy and Paperworkers Union of Canada
+CFY 	Current Fiscal Year
+CMCFA 	Canadian Military Colleges Faculty Association
+CU 	Credit Union
+Curr 	Current
+Deficienc 	Deficiencies
+Dep 	Department
+DSSA 	Diplomatic Services (Special) Superannuation Act
+EE 	Employee or Employee Paid
+EI 	Employment Insurance
+Ener 	Energy
+ER 	Employer Paid
+FY 	Fiscal Year
+GCWCC 	Government of Canada Workplace Charitable Campaign
+ID 	Identification
+LTD 	Long Term Disability
+LWOP 	Leave Without Pay
+MPRA 	Member of Parliament Retiring Allowance
+MPRAA 	Members of Parliament Retiring Allowance Act
+MPRCA 	Members of Parliament Retirement Compensation Arrangement
+NFB 	National Film Board
+NRC 	National Research Council of Canada
+Ops 	Ontario Public Service
+PFY 	Previous Fiscal Year
+PSAC 	Public Service Alliance of Canada
+PSHCP 	Public Services Health Care Plan
+PSMIP 	Public Service Management Insurance Plan
+P/Y 	Previous Year
+QC 	Quebec
+QIT 	Quebec Income Tax
+RCA 	Retirement Compensation Arrangements
+RCMP 	Royal Canadian Mounted Police
+Retro 	Retroactive or Retroactivity
+ROC 	Return of Contribution
+Senate Pro Serv Sta Assn 	Senate Protection Services Staff Association
+SUPP/Suppl 	Supplementary
+TCTI 	Transport Canada Training Institute
+WP 	Winnipeg
+
+
+Pay Slips
+
+Employers need to give each of their employees a written or electronic wage statement (pay stub) on every payday.
+
+A wage statement needs to be separate from a pay cheque, so that the employee can keep it. It needs to include:
+
+    The employer's name and address
+    The hours worked by the employee
+    The employee's wage rate (for example, an hourly wage, salary, flat or piece rate, commission, or other incentive basis)
+    The hours worked by the employee at the overtime wage rate(s)
+    Any money, allowance or other payment the employee is entitled to (for example, vacation or statutory holiday pay)
+    The amount and purpose of each deduction from the employee's wages
+    How the employee's wages were calculated (if they were paid anything other than an hourly wage or salary)
+    The employee's gross and net wages
+    Any amounts withdrawn from the employee's time bank and the remaining balance
+
+If all the information on a wage statement is the same as the last pay period, then employers don’t need to provide a new one until that information changes.
+
+Employers can provide electronic wage statements to their employees. If they do, they need to provide their employees with a way to confidentially access and make a paper copy of each wage statement through the workplace.
+
+he required employer and employee identification information is as follows:
+
+    Employer’s name
+    Employee’s first and last name
+    The title of the position
+    Payment date
+    The work period the payment corresponds to
+
+Salary information
+
+There is also important salary information that must be included on the pay stub:
+
+    The number of hours paid at the normal rate
+    The amount of overtime paid
+    The amount of overtime replaced by time off with the applicable rate
+    The type and amount of any bonuses, allowance, benefits or commissions paid
+    The hourly rate
+    Gross pay 
+    Net pay
+    The tips declared by the employee or provided by the employer (if applicable)
+
+Deductions
+
+Finally, the pay stub must include all relevant information about the employee’s pay deductions. Some deductions such as employer payroll taxes are mandatory for all employees. There may be others as well, depending on the industry and the company in question.
+
+Here are the deductions (mandatory deductions for all employees are listed in bold):
+
+    Quebec and federal income tax
+    Contribution to the health services fund (HSF)
+    Contribution to the Québec Pension Plan (QPP)
+    Contribution to the Québec Parental Insurance Plan (QPIP)
+    Employment insurance (EI) premiums
+    Contribution to the company’s pension plan
+    Contribution to the company’s group insurance plan
+    Union dues
+
+    
+
+Employers must provide a statement of earnings or pay stub on each pay day and when making payments of wage adjustments. They must also maintain payroll records required by the legislation.
+
+The statement of earnings must be separate from the wage cheque. It must list:
+
+    the name of the employee;
+    the start and end dates of the period for which the payment is made;
+    regular, overtime, and public holiday hours worked;
+    the rate of pay;
+    the amount paid for each of wages, overtime and public holiday pay and work on a public holiday, vacation pay, and pay instead of notice;
+    the employment category of employment for which payment of wages is being made;
+    the amount of total wages or earnings;
+    an itemized list of any deductions made from wages;
+    total earnings; and
+    the actual amount of the payment being made.
+
+Ideally, the statement of earnings should have the name and address of the employer.
+
