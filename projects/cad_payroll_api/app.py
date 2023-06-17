@@ -2,6 +2,7 @@ from flask import Flask, jsonify, request
 from flask_api import status
 import payroll_formulas as pf
 import logging
+import data_validation as dv
 
 app = Flask(__name__)
 
@@ -11,20 +12,15 @@ def home():
     # print(data["test"])
     return jsonify(data)
 
-# you have all the pieces for this. build it out fully
 @app.route("/payroll/cpp_contributions")
 def cpp_contributions():
     json_body = request.get_json()
-    print(json_body)
-    print(type(json_body["test"]))
-    print(type(json_body["test2"]))
-    print(type(json_body["test3"]))
-    #return jsonify({"message":"test"})
-    return jsonify({"error_message":"too many records"}),status.HTTP_400_BAD_REQUEST
-    # print(request.json)
-    # print(request.json["hello"])
-    # cpp = pf.cpp_contributions(0,0.0595,3500,3700,52,request.json["hello"])
-    # return jsonify({"message":cpp})
+    data_validation_response = dv.validate_json_cpp(json_body)
+    print(type(json_body["gross_earnings"]))
+    if data_validation_response != "Valid":
+        return jsonify({"error_message":data_validation_response}),status.HTTP_400_BAD_REQUEST
+    else:
+        return jsonify({"cpp_contribution":pf.cpp_contributions(json_body["gross_earnings"],json_body["pay_frequency"],json_body["ytd_contributions"],json_body["year"])})
 
 @app.route("/payroll/ei_premiums")
 def ei_premiums():

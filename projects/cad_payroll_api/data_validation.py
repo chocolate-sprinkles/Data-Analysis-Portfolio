@@ -10,11 +10,12 @@ def validate_json_cpp(user_data):
         return "ytd_contributions missing"
     elif "pay_frequency" not in user_data.keys():
         return "pay_frequency is missing"
-    elif not isinstance(user_data["gross_earnings"],int) or not isinstance(user_data["gross_earnings"],float):
+    elif not (isinstance(user_data["gross_earnings"],int) or isinstance(user_data["gross_earnings"],float)):
+        print(type(user_data["gross_earnings"]))
         return "gross_earnings is not a numeric value"
     elif not isinstance(user_data["year"],int):
         return "year is not an integer value"
-    elif not isinstance(user_data["ytd_contributions"],int) or not isinstance(user_data["ytd_contributions"],float):
+    elif not (isinstance(user_data["ytd_contributions"],int) or isinstance(user_data["ytd_contributions"],float)):
         return "ytd_contributions is not a numeric value"
     elif not isinstance(user_data["pay_frequency"],str):
         return "pay_frequency must be a string value"
@@ -27,3 +28,5 @@ def validate_json_cpp(user_data):
         return "ytd_contributions cannot be negative"
     elif user_data["pay_frequency"] not in ["Weekly","Bi-Weekly","Semi-Monthly","Monthly"]:
         return "pay_frequency is not one of 'Weekly','Bi-Weekly','Semi-Monthly','Monthly'"
+    else:
+        return "Valid"

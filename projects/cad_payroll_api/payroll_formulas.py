@@ -47,7 +47,31 @@ def cpp_contributions(gross_income,pay_frequency,ytd_contributions,year):
     pay_period_data = db.get_pay_periods(year)
 
     # transform pay_frqeuency to numeric value
-    
+    # {'yr': [2023, 2023, 2023, 2023], 'full_name': ['Weekly', 'Bi-Weekly', 'Semi-Monthly', 'Monthly'], 'num_pay_periods': [52.0, 26.0, 24.0, 12.0]}
+    num_pay_periods = pay_period_data["num_pay_periods"][pay_period_data["full_name"].index(pay_frequency)]
+
+    # put cpp_values in variables for readability
+    # {'yr': [2023], 'max_contribution': [3754.0], 'exemption': [3500.0], 'rate': [0.0595]}
+    rate = cpp_data["rate"][cpp_data["yr"].index(year)]
+    max_contribution = cpp_data["max_contribution"][cpp_data["yr"].index(year)]
+    exemption = cpp_data["exemption"][cpp_data["yr"].index(year)]
+
+    current_cpp_contribution = ((gross_income * num_pay_periods) - exemption) / num_pay_periods * rate
+
+    if current_cpp_contribution < 0:
+        logging.info("payroll_formulas.cpp_contributions() produced a reuslt of {}".format(0))
+        return 0
+    elif ytd_contributions >= max_contribution:
+        logging.info("payroll_formulas.cpp_contributions() produced a reuslt of {}".format(0))
+        return 0
+    elif current_cpp_contribution + ytd_contributions > max_contribution:
+        logging.info("payroll_formulas.cpp_contributions() produced a reuslt of {}".format(max_contribution - ytd_contributions))
+        return max_contribution - ytd_contributions
+    else:
+        logging.info("payroll_formulas.cpp_contributions() produced a reuslt of {}".format(current_cpp_contribution))
+        return current_cpp_contribution
+
+
 
 
 def ei_premium(ytd_contributions, rate, gross_income, contribution_max):
