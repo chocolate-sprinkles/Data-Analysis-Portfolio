@@ -35,13 +35,13 @@ def execute_query(query,table_name):
     # get data
     cursor.execute(query)
     query_results = cursor.fetchall()
-    print(query_results)
+    # print(query_results)
     # get column names
     column_query = "SELECT column_name,data_type FROM information_schema.columns WHERE table_schema = 'public' AND table_name = '{}';".format(table_name)
     cursor.execute(column_query)
     column_names = cursor.fetchall()
-    print(column_names)
-    print(column_names[0][0])
+    # print(column_names)
+    # print(column_names[0][0])
     
     # taking the followin
     # [(2023, '$3,754.00', '$3,500.00', Decimal('0.05950'))]
@@ -70,7 +70,7 @@ def get_ei_query(year):
     return execute_query(query,"ei_values")
 
 def get_tax_brackets(year,region):
-    query = "SELECT * FROM tax_brackets WHERE yr = {} AND region = {}".format(year,region)
+    query = "SELECT * FROM tax_brackets WHERE yr = {} AND region = '{}'".format(year,region)
     return execute_query(query,"tax_brackets")
 
 def get_canada_employment_amount(year):
@@ -81,7 +81,7 @@ def get_pay_periods(year):
     query = "SELECT * FROM pay_periods WHERE yr = {}".format(year)
     return execute_query(query,"pay_periods")
 
-if __name__ == "__main__":
-    print(execute_query("SELECT * FROM cpp_values WHERE yr = 2023;","cpp_values"))
-    print(execute_query("SELECT * FROM tax_brackets WHERE region = 'Alberta';","tax_brackets"))
-    print(execute_query("SELECT * FROM pay_periods WHERE yr = 2023","pay_periods"))
+# if __name__ == "__main__":
+#     print(execute_query("SELECT * FROM cpp_values WHERE yr = 2023;","cpp_values"))
+#     print(execute_query("SELECT * FROM tax_brackets WHERE region = 'Alberta';","tax_brackets"))
+#     print(execute_query("SELECT * FROM pay_periods WHERE yr = 2023","pay_periods"))

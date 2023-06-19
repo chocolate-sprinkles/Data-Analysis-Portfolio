@@ -18,14 +18,14 @@ import db_functions as db
 # 2. Will need to look into order of parameters
 # 3. add type hinting for parameters and also for output
 # 4. update comments once parameter names and order is finalized
-def cpp_contributions_old(ytd_contributions, rate, exemption, contribution_max, pay_periods, gross_income):
+def cpp_contributions_old(ytd_contributions, rate, exemption, contribution_max, pay_periods, gross_earnings):
     # ytd_contributions - cpp contributions from the beginning of the year to today
     # rate - cpp contribution rate
     # contribution_max - maximum contribution amount for the taxation year
     # pay_periods - number of pay periods for the employee whose cpp is being calculated
-    # gross_income - income before taxations or any deductions for a pay period
+    # gross_earnings - income before taxations or any deductions for a pay period
 
-    current_cpp_contribution = ((gross_income * pay_periods) - exemption) / pay_periods * rate
+    current_cpp_contribution = ((gross_earnings * pay_periods) - exemption) / pay_periods * rate
 
     if current_cpp_contribution < 0:
         logging.info("payroll_formulas.cpp_contributions() produced a reuslt of {}".format(0))
@@ -39,8 +39,9 @@ def cpp_contributions_old(ytd_contributions, rate, exemption, contribution_max, 
     else:
         logging.info("payroll_formulas.cpp_contributions() produced a reuslt of {}".format(current_cpp_contribution))
         return current_cpp_contribution
-    
-def cpp_contributions(gross_income,pay_frequency,ytd_contributions,year):
+
+# can combine cpp and ei, but should i?
+def cpp_contributions(gross_earnings,pay_frequency,ytd_contributions,year):
     
     # load values
     cpp_data =db.get_cpp_data(year)
@@ -56,7 +57,7 @@ def cpp_contributions(gross_income,pay_frequency,ytd_contributions,year):
     max_contribution = cpp_data["max_contribution"][cpp_data["yr"].index(year)]
     exemption = cpp_data["exemption"][cpp_data["yr"].index(year)]
 
-    current_cpp_contribution = ((gross_income * num_pay_periods) - exemption) / num_pay_periods * rate
+    current_cpp_contribution = ((gross_earnings * num_pay_periods) - exemption) / num_pay_periods * rate
 
     if current_cpp_contribution < 0:
         logging.info("payroll_formulas.cpp_contributions() produced a reuslt of {}".format(0))
@@ -72,11 +73,9 @@ def cpp_contributions(gross_income,pay_frequency,ytd_contributions,year):
         return current_cpp_contribution
 
 
+def ei_premium_old(ytd_contributions, rate, gross_earnings, contribution_max):
 
-
-def ei_premium(ytd_contributions, rate, gross_income, contribution_max):
-
-    current_ei_premum = gross_income * rate
+    current_ei_premum = gross_earnings * rate
 
     if ytd_contributions >= contribution_max:
         return 0
@@ -84,11 +83,27 @@ def ei_premium(ytd_contributions, rate, gross_income, contribution_max):
         return contribution_max - ytd_contributions
     else:
         return current_ei_premum
+    
+def ei_premium(gross_earnings: int|float,ytd_contributions,year):
+    
+    # load data 
+    ei_data = db.get_ei_query(year)
+    max_contribution = ei_data["max_contribution"][ei_data["yr"].index(year)]
+    rate = ei_data["rate"][ei_data["yr"].index(year)]
+
+    current_ei_premum = gross_earnings * rate
+
+    if ytd_contributions >= max_contribution:
+        return 0
+    elif current_ei_premum + ytd_contributions > max_contribution:
+        return max_contribution - ytd_contributions
+    else:
+        return current_ei_premum
 
 
-def federal_tax(gross_income, pay_periods):
+def federal_tax(gross_earnings, pay_periods):
 
-    annual_taxable_income = gross_income * pay_periods
+    annual_taxable_income = gross_earnings * pay_periods
 
     # theres a constant K that is added to the tables. what is it used for again?
     if annual_taxable_income < 53359:
@@ -113,9 +128,9 @@ def federal_tax_credits(pay_periods, cpp_contribution, ei_premiums, canada_emplo
     return tax_credits
 
 
-def alberta_tax(gross_income, pay_periods):
+def alberta_tax(gross_earnings, pay_periods):
 
-    annual_taxable_income = gross_income * pay_periods
+    annual_taxable_income = gross_earnings * pay_periods
 
     # theres a constant K that is added to the tables. what is it used for again?
     if annual_taxable_income < 142292:
@@ -140,8 +155,64 @@ def alberta_tax_credits(pay_periods, cpp_contribution, ei_premiums, basic_person
     return tax_credits
 
 # test function to see how you run the entire payroll process
-def alberta_payroll(gross_income,pay_periods,cpp_rate,ei_premium,cpp_max_contribution,ei_max_premium,ytd_cpp_contributions,ytd_ei_premiums,cpp_exemption,canada_employment_amount,fed_tax_rate_min,provincial_tax_rate_min):
+def alberta_payroll(gross_earnings,pay_periods,cpp_rate,ei_premium,cpp_max_contribution,ei_max_premium,ytd_cpp_contributions,ytd_ei_premiums,cpp_exemption,canada_employment_amount,fed_tax_rate_min,provincial_tax_rate_min):
     pass
 
-def process_payroll():
-    pass
+# steps to process payroll
+# 1. get request with data
+# this requires the following pieces of information from the user: gross_earnings, pay_frequency, ytd_contribution_cpp, ytd_contribution_ei, personal_amount_fed, personal_amount_prov, province
+# 2. validate all the above data
+# 3. load the following data from the database: pay_periods, cpp_rate, ei_rate, max_contributions_cpp, max_contributions_ei, cpp_exemption, canada_employment_amount, tax_rates_fed, tax_rates_prov, tax_rate_min_fed, tax_rate_min_prov
+# 4. calculate cpp contribution and store value
+# 5. calculate ei contribution and store value
+# 6. calculate tax_payable and store value
+# 7 calculate tax_credits and store value
+# 8 finalize tax    
+# 9. do the steps for both fed and prov
+
+def process_payroll(gross_earnings,pay_frequency,ytd_contribution_cpp,ytd_contribution_ei,personal_amount_fed,personal_amount_prov,province,year):
+    if province in ["Alberta"]:
+        # load data
+        cpp_data = db.get_cpp_data(year)
+        ei_data = db.get_ei_query(year)
+        tax_data = db.get_tax_brackets(year,province)
+        pay_period_data = db.get_pay_periods(year)
+        canada_employment_amount_data = db.get_canada_employment_amount(year)
+
+        # extract data
+        # cpp
+        rate_cpp = cpp_data["rate"][cpp_data["yr"].index(year)]
+        max_contribution_cpp = cpp_data["max_contribution"][cpp_data["yr"].index(year)]
+        exemption_cpp = cpp_data["exemption"][cpp_data["yr"].index(year)]
+        # ei
+        rate_ei = ei_data["rate"][ei_data["yr"].index(year)]
+        max_contribution_ei = ei_data["max_contribution"][ei_data["yr"].index(year)]
+        # canada_employemnt_amount
+        canada_employment_amount = canada_employment_amount_data["amount"][canada_employment_amount_data["yr"].index(year)]
+        # tax_brackets
+        # tax_brackets = 
+        # pay periods
+        num_pay_periods = pay_period_data["num_pay_periods"][pay_period_data["full_name"].index(pay_frequency)]
+
+        curr_cpp_contribution = cpp_contributions(gross_earnings,pay_frequency,ytd_contribution_cpp,year)
+        curr_ei_premium = ei_premium(gross_earnings,ytd_contribution_ei,year)
+
+        print (curr_cpp_contribution)
+        print (curr_ei_premium)
+
+        # need PDOC test cases for this 
+        tax_payable_fed = federal_tax(gross_earnings,num_pay_periods)
+        tax_credit_fed = federal_tax_credits(num_pay_periods,curr_cpp_contribution,curr_ei_premium,canada_employment_amount,personal_amount_prov,max_contribution_cpp,max_contribution_ei,0.15)
+
+        print ((tax_payable_fed - tax_credit_fed)/num_pay_periods)
+
+        tax_payable_prov = alberta_tax(gross_earnings,num_pay_periods)
+        tax_credits_prov = alberta_tax_credits(num_pay_periods,curr_cpp_contribution,curr_ei_premium,personal_amount_prov,max_contribution_cpp,max_contribution_ei,0.10)
+
+        print ((tax_payable_prov - tax_credits_prov)/num_pay_periods)
+
+    else:
+        return 0
+
+if __name__ == "__main__":
+    print(process_payroll(1000,"Weekly",0,0,15000,21003,"Alberta",2023))

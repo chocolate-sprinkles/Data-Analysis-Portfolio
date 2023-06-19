@@ -210,3 +210,203 @@
 2023-06-17 11:44:27,720 -  * Restarting with watchdog (windowsapi)
 2023-06-17 11:44:28,252 -  * Debugger is active!
 2023-06-17 11:44:28,252 -  * Debugger PIN: 370-009-016
+2023-06-17 11:48:20,353 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-06-17 11:48:20,353 - [33mPress CTRL+C to quit[0m
+2023-06-17 11:48:20,371 -  * Restarting with watchdog (windowsapi)
+2023-06-17 11:48:20,969 -  * Debugger is active!
+2023-06-17 11:48:20,969 -  * Debugger PIN: 370-009-016
+2023-06-17 11:48:23,414 - payroll_formulas.cpp_contributions() produced a reuslt of 55.49519230769231
+2023-06-17 11:48:23,417 - 127.0.0.1 - - [17/Jun/2023 11:48:23] "GET /payroll/cpp_contributions HTTP/1.1" 200 -
+2023-06-17 15:59:46,891 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-06-17 15:59:46,895 - [33mPress CTRL+C to quit[0m
+2023-06-17 15:59:46,931 -  * Restarting with watchdog (windowsapi)
+2023-06-17 15:59:47,567 -  * Debugger is active!
+2023-06-17 15:59:47,567 -  * Debugger PIN: 370-009-016
+2023-06-17 16:00:01,711 - 127.0.0.1 - - [17/Jun/2023 16:00:01] "[31m[1mGET /payroll/ei_premiums HTTP/1.1[0m" 400 -
+2023-06-17 16:00:12,652 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\app.py', reloading
+2023-06-17 16:00:12,660 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\app.py', reloading
+2023-06-17 16:00:12,660 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\app.py', reloading
+2023-06-17 16:00:12,859 -  * Restarting with watchdog (windowsapi)
+2023-06-17 16:00:13,325 -  * Debugger is active!
+2023-06-17 16:00:13,327 -  * Debugger PIN: 370-009-016
+2023-06-17 16:00:15,187 - 127.0.0.1 - - [17/Jun/2023 16:00:15] "GET /payroll/ei_premiums HTTP/1.1" 200 -
+2023-06-17 16:00:24,927 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\app.py', reloading
+2023-06-17 16:00:24,927 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\app.py', reloading
+2023-06-17 16:00:24,929 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\app.py', reloading
+2023-06-17 16:00:24,929 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\app.py', reloading
+2023-06-17 16:00:25,502 -  * Restarting with watchdog (windowsapi)
+2023-06-17 16:00:26,152 -  * Debugger is active!
+2023-06-17 16:00:26,156 -  * Debugger PIN: 370-009-016
+2023-06-17 16:00:27,151 - 127.0.0.1 - - [17/Jun/2023 16:00:27] "GET /payroll/ei_premiums HTTP/1.1" 200 -
+2023-06-17 16:01:04,144 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\data_validation.py', reloading
+2023-06-17 16:01:04,147 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\data_validation.py', reloading
+2023-06-17 16:01:04,152 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\data_validation.py', reloading
+2023-06-17 16:01:04,587 -  * Restarting with watchdog (windowsapi)
+2023-06-17 16:01:05,347 -  * Debugger is active!
+2023-06-17 16:01:05,347 -  * Debugger PIN: 370-009-016
+2023-06-17 16:10:47,050 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 16:10:47,052 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 16:10:47,387 -  * Restarting with watchdog (windowsapi)
+2023-06-17 16:10:48,039 -  * Debugger is active!
+2023-06-17 16:10:48,039 -  * Debugger PIN: 370-009-016
+2023-06-17 16:14:56,080 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 16:14:56,087 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 16:14:56,087 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 16:14:56,087 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 16:14:57,232 -  * Restarting with watchdog (windowsapi)
+2023-06-17 16:14:57,920 -  * Debugger is active!
+2023-06-17 16:14:57,924 -  * Debugger PIN: 370-009-016
+2023-06-17 16:36:34,931 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 16:36:34,931 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 16:36:34,939 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 16:36:34,939 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 16:36:35,385 -  * Restarting with watchdog (windowsapi)
+2023-06-17 16:36:36,047 -  * Debugger is active!
+2023-06-17 16:36:36,051 -  * Debugger PIN: 370-009-016
+2023-06-17 16:51:27,513 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 16:51:27,516 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 16:51:27,519 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 16:51:27,521 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 16:51:27,645 -  * Restarting with watchdog (windowsapi)
+2023-06-17 16:51:28,417 -  * Debugger is active!
+2023-06-17 16:51:28,421 -  * Debugger PIN: 370-009-016
+2023-06-17 17:43:10,985 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 17:43:10,989 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 17:43:10,989 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 17:43:10,991 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 17:43:11,192 -  * Restarting with watchdog (windowsapi)
+2023-06-17 17:43:11,872 -  * Debugger is active!
+2023-06-17 17:43:11,875 -  * Debugger PIN: 370-009-016
+2023-06-17 17:46:39,471 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 17:46:39,476 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 17:46:39,476 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 17:46:39,476 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 17:46:39,696 -  * Restarting with watchdog (windowsapi)
+2023-06-17 17:46:40,349 -  * Debugger is active!
+2023-06-17 17:46:40,353 -  * Debugger PIN: 370-009-016
+2023-06-17 17:47:34,251 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 17:47:34,259 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 17:47:34,259 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 17:47:34,261 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 17:47:34,981 -  * Restarting with watchdog (windowsapi)
+2023-06-17 17:47:35,404 -  * Debugger is active!
+2023-06-17 17:47:35,408 -  * Debugger PIN: 370-009-016
+2023-06-17 17:47:39,244 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 17:47:39,251 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 17:47:39,252 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 17:47:39,252 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 17:47:39,527 -  * Restarting with watchdog (windowsapi)
+2023-06-17 17:47:40,065 -  * Debugger is active!
+2023-06-17 17:47:40,069 -  * Debugger PIN: 370-009-016
+2023-06-17 17:47:56,820 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 17:47:56,826 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 17:47:56,826 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 17:47:56,826 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 17:47:57,341 -  * Restarting with watchdog (windowsapi)
+2023-06-17 17:47:58,044 -  * Debugger is active!
+2023-06-17 17:47:58,048 -  * Debugger PIN: 370-009-016
+2023-06-17 17:48:58,260 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 17:48:58,270 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 17:48:58,270 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 17:48:58,273 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 17:48:58,702 -  * Restarting with watchdog (windowsapi)
+2023-06-17 17:48:59,200 -  * Debugger is active!
+2023-06-17 17:48:59,204 -  * Debugger PIN: 370-009-016
+2023-06-17 17:52:53,721 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 17:52:53,729 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 17:52:53,729 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 17:52:53,729 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 17:52:54,258 -  * Restarting with watchdog (windowsapi)
+2023-06-17 17:52:54,798 -  * Debugger is active!
+2023-06-17 17:52:54,798 -  * Debugger PIN: 370-009-016
+2023-06-17 17:56:33,314 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\app.py', reloading
+2023-06-17 17:56:33,321 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\app.py', reloading
+2023-06-17 17:56:33,833 -  * Restarting with watchdog (windowsapi)
+2023-06-17 17:56:34,503 -  * Debugger is active!
+2023-06-17 17:56:34,503 -  * Debugger PIN: 370-009-016
+2023-06-17 17:56:57,042 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 17:56:57,051 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 17:56:57,051 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 17:56:57,051 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 17:56:57,791 -  * Restarting with watchdog (windowsapi)
+2023-06-17 17:56:58,301 -  * Debugger is active!
+2023-06-17 17:56:58,304 -  * Debugger PIN: 370-009-016
+2023-06-17 17:57:08,636 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\app.py', reloading
+2023-06-17 17:57:08,636 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\app.py', reloading
+2023-06-17 17:57:08,645 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\app.py', reloading
+2023-06-17 17:57:08,645 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\app.py', reloading
+2023-06-17 17:57:09,501 -  * Restarting with watchdog (windowsapi)
+2023-06-17 17:57:10,023 -  * Debugger is active!
+2023-06-17 17:57:10,023 -  * Debugger PIN: 370-009-016
+2023-06-17 17:57:11,155 -  * Detected change in 'C:\\Users\\choco\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\flask\\globals.py', reloading
+2023-06-17 17:57:11,581 -  * Detected change in 'C:\\Users\\choco\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\werkzeug\\local.py', reloading
+2023-06-17 17:57:11,647 -  * Detected change in 'C:\\Users\\choco\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\flask\\ctx.py', reloading
+2023-06-17 17:57:12,115 -  * Restarting with watchdog (windowsapi)
+2023-06-17 17:57:12,577 -  * Debugger is active!
+2023-06-17 17:57:12,580 -  * Debugger PIN: 370-009-016
+2023-06-17 17:57:18,587 -  * Detected change in 'C:\\Users\\choco\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\flask\\json\\__init__.py', reloading
+2023-06-17 17:57:18,711 -  * Restarting with watchdog (windowsapi)
+2023-06-17 17:57:19,173 -  * Debugger is active!
+2023-06-17 17:57:19,177 -  * Debugger PIN: 370-009-016
+2023-06-17 17:57:23,128 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\app.py', reloading
+2023-06-17 17:57:23,140 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\app.py', reloading
+2023-06-17 17:57:23,314 -  * Restarting with watchdog (windowsapi)
+2023-06-17 17:57:23,935 -  * Debugger is active!
+2023-06-17 17:57:23,935 -  * Debugger PIN: 370-009-016
+2023-06-17 18:06:44,789 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 18:06:44,795 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 18:06:44,797 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 18:06:44,797 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 18:06:45,593 -  * Restarting with watchdog (windowsapi)
+2023-06-17 18:06:46,159 -  * Debugger is active!
+2023-06-17 18:06:46,163 -  * Debugger PIN: 370-009-016
+2023-06-17 18:08:13,009 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 18:08:13,018 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 18:08:13,018 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 18:08:13,018 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 18:08:14,007 -  * Restarting with watchdog (windowsapi)
+2023-06-17 18:08:14,526 -  * Debugger is active!
+2023-06-17 18:08:14,528 -  * Debugger PIN: 370-009-016
+2023-06-17 18:09:43,386 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 18:09:43,395 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 18:09:43,395 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 18:09:43,395 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 18:09:44,404 -  * Restarting with watchdog (windowsapi)
+2023-06-17 18:09:44,999 -  * Debugger is active!
+2023-06-17 18:09:45,002 -  * Debugger PIN: 370-009-016
+2023-06-17 18:10:12,922 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 18:10:12,922 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 18:10:12,929 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 18:10:12,931 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 18:10:13,325 -  * Restarting with watchdog (windowsapi)
+2023-06-17 18:10:13,928 -  * Debugger is active!
+2023-06-17 18:10:13,932 -  * Debugger PIN: 370-009-016
+2023-06-17 18:10:52,776 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 18:10:52,784 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 18:10:52,784 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 18:10:52,784 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 18:10:53,316 -  * Restarting with watchdog (windowsapi)
+2023-06-17 18:10:53,886 -  * Debugger is active!
+2023-06-17 18:10:53,890 -  * Debugger PIN: 370-009-016
+2023-06-17 18:15:25,935 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 18:15:25,935 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 18:15:25,939 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 18:15:25,939 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-17 18:15:26,290 -  * Restarting with watchdog (windowsapi)
+2023-06-17 18:15:27,200 -  * Debugger is active!
+2023-06-17 18:15:27,200 -  * Debugger PIN: 370-009-016
+2023-06-18 08:13:32,250 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-18 08:13:32,253 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-18 08:13:32,253 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-18 08:13:32,257 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-18 08:13:33,213 -  * Restarting with watchdog (windowsapi)
+2023-06-18 08:13:34,233 -  * Debugger is active!
+2023-06-18 08:13:34,236 -  * Debugger PIN: 370-009-016
+2023-06-18 08:18:49,116 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-18 08:18:49,123 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-18 08:18:49,123 -  * Detected change in 'c:\\Users\\choco\\OneDrive\\Desktop\\Becoming a Data Scientist\\Data-Analysis-Portfolio\\projects\\cad_payroll_api\\payroll_formulas.py', reloading
+2023-06-18 08:18:49,846 -  * Restarting with watchdog (windowsapi)
+2023-06-18 08:18:50,412 -  * Debugger is active!
+2023-06-18 08:18:50,416 -  * Debugger PIN: 370-009-016
